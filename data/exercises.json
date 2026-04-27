@@ -1,0 +1,205 @@
+{
+  "categories": {
+    "chest_compound": {
+      "label": "Chest Compound",
+      "muscle_group": "upper",
+      "is_lower": false,
+      "exercises": [
+        {"id": "bench_bar",      "name": "Barbell Bench Press",   "video_id": "rT7DgljzYDg"},
+        {"id": "bench_db",       "name": "Dumbbell Bench Press",  "video_id": "VmB1G1K7v94"},
+        {"id": "chest_machine",  "name": "Machine Chest Press",   "video_id": "Dg7ricMvQcM"},
+        {"id": "pushup",         "name": "Push-ups",              "video_id": "IODxDxX7oi4"}
+      ]
+    },
+    "chest_secondary": {
+      "label": "Chest Secondary",
+      "muscle_group": "upper",
+      "is_lower": false,
+      "exercises": [
+        {"id": "incline_db",   "name": "Incline DB Press",  "video_id": "8iPEnn-ltC8"},
+        {"id": "cable_fly",    "name": "Cable Fly",         "video_id": "Iwe6AmxahH8"},
+        {"id": "pec_deck",     "name": "Pec Deck",          "video_id": "Z57CtFmRMxA"}
+      ]
+    },
+    "shoulder_press": {
+      "label": "Shoulder Press",
+      "muscle_group": "upper",
+      "is_lower": false,
+      "exercises": [
+        {"id": "ohp_bar",   "name": "Overhead Barbell Press",    "video_id": "CnBmiBqp-AI"},
+        {"id": "ohp_db",    "name": "Dumbbell Shoulder Press",   "video_id": "qEwKCR5JCog"},
+        {"id": "arnold",    "name": "Arnold Press",              "video_id": "6Z15_WdXmVw"}
+      ]
+    },
+    "lateral_raise": {
+      "label": "Lateral Raise",
+      "muscle_group": "upper",
+      "is_lower": false,
+      "exercises": [
+        {"id": "lateral_db",     "name": "DB Lateral Raise",     "video_id": "3VcKaXpzqRo"},
+        {"id": "lateral_cable",  "name": "Cable Lateral Raise",  "video_id": "kDqklk1KRAM"}
+      ]
+    },
+    "triceps_compound": {
+      "label": "Triceps Compound",
+      "muscle_group": "upper",
+      "is_lower": false,
+      "exercises": [
+        {"id": "cgbp",          "name": "Close-Grip Bench Press",     "video_id": "nEF0bv2Fi-Y"},
+        {"id": "pushdown_bar",  "name": "Triceps Pushdown (Bar)",     "video_id": "vB5OHsJ3EME"}
+      ]
+    },
+    "triceps_isolation": {
+      "label": "Triceps Isolation",
+      "muscle_group": "upper",
+      "is_lower": false,
+      "exercises": [
+        {"id": "tri_overhead",  "name": "Overhead Triceps Extension",  "video_id": "YbX7Wd8jQ-Q"},
+        {"id": "skulls",        "name": "Skull Crushers",              "video_id": "d_KZxkY_0cM"}
+      ]
+    },
+    "vertical_pull": {
+      "label": "Vertical Pull",
+      "muscle_group": "upper",
+      "is_lower": false,
+      "exercises": [
+        {"id": "pullup",    "name": "Pull-ups",      "video_id": "eGo4IYlbE5g"},
+        {"id": "pulldown",  "name": "Lat Pulldown",  "video_id": "CAwf7n6Luuc"}
+      ]
+    },
+    "horizontal_row": {
+      "label": "Horizontal Row",
+      "muscle_group": "upper",
+      "is_lower": false,
+      "exercises": [
+        {"id": "row_bar",    "name": "Barbell Row",  "video_id": "G8l_8chR5BE"},
+        {"id": "row_db",     "name": "DB Row",       "video_id": "roCP2zvD5Js"},
+        {"id": "row_cable",  "name": "Cable Row",    "video_id": "UCXmny8EttA"}
+      ]
+    },
+    "rear_delt": {
+      "label": "Rear Delt",
+      "muscle_group": "upper",
+      "is_lower": false,
+      "exercises": [
+        {"id": "face_pull",  "name": "Face Pull",    "video_id": "HSoHeSJFOWs"},
+        {"id": "rev_fly",    "name": "Reverse Fly",  "video_id": "imRBoJqozKI"}
+      ]
+    },
+    "biceps_compound": {
+      "label": "Biceps Compound",
+      "muscle_group": "upper",
+      "is_lower": false,
+      "exercises": [
+        {"id": "curl_bar",     "name": "Barbell Curl",  "video_id": "kwG2ipFRgfo"},
+        {"id": "curl_hammer",  "name": "Hammer Curl",   "video_id": "zC3nMkuokxs"}
+      ]
+    },
+    "biceps_isolation": {
+      "label": "Biceps Isolation",
+      "muscle_group": "upper",
+      "is_lower": false,
+      "exercises": [
+        {"id": "curl_incline",  "name": "Incline DB Curl",      "video_id": "soxrZlIl35U"},
+        {"id": "curl_conc",     "name": "Concentration Curl",   "video_id": "Jvj2wV0vOYU"}
+      ]
+    },
+    "face_pull_shrug": {
+      "label": "Face Pull / Shrug",
+      "muscle_group": "upper",
+      "is_lower": false,
+      "exercises": [
+        {"id": "face_pull",  "name": "Face Pull",  "video_id": "HSoHeSJFOWs"},
+        {"id": "shrug_db",   "name": "DB Shrug",   "video_id": "cJRVVxmytaM"}
+      ]
+    },
+    "squat_pattern": {
+      "label": "Squat Pattern",
+      "muscle_group": "lower",
+      "is_lower": true,
+      "exercises": [
+        {"id": "squat_bar",     "name": "Barbell Back Squat",  "video_id": "bEv6CCg2BC8"},
+        {"id": "squat_goblet",  "name": "Goblet Squat",        "video_id": "MeIiIdhvXT4"},
+        {"id": "leg_press",     "name": "Leg Press",           "video_id": "IZxyjW7MPJQ"}
+      ]
+    },
+    "hip_hinge": {
+      "label": "Hip Hinge",
+      "muscle_group": "lower",
+      "is_lower": true,
+      "exercises": [
+        {"id": "rdl",        "name": "Romanian Deadlift",  "video_id": "JCXZnBiOcH8"},
+        {"id": "deadlift",   "name": "Barbell Deadlift",   "video_id": "VL5Ab0T_S8I"},
+        {"id": "kb_swing",   "name": "Kettlebell Swing",   "video_id": "YSxHkQUEZQs"}
+      ]
+    },
+    "quad_isolation": {
+      "label": "Quad Isolation",
+      "muscle_group": "lower",
+      "is_lower": true,
+      "exercises": [
+        {"id": "leg_ext",  "name": "Leg Extension",  "video_id": "m0FOpMEgB_Y"}
+      ]
+    },
+    "hamstring_isolation": {
+      "label": "Hamstring Isolation",
+      "muscle_group": "lower",
+      "is_lower": true,
+      "exercises": [
+        {"id": "leg_curl",  "name": "Leg Curl",  "video_id": "1Tq3QdYUuHs"}
+      ]
+    },
+    "calves": {
+      "label": "Calves",
+      "muscle_group": "lower",
+      "is_lower": true,
+      "exercises": [
+        {"id": "calf_stand",  "name": "Standing Calf Raise",  "video_id": "gwLzBv7i5UA"},
+        {"id": "calf_seat",   "name": "Seated Calf Raise",    "video_id": "JbyjNymZOt0"}
+      ]
+    },
+    "glute_isolation": {
+      "label": "Glute Isolation",
+      "muscle_group": "lower",
+      "is_lower": true,
+      "exercises": [
+        {"id": "hip_thrust",  "name": "Hip Thrust",  "video_id": "xDmFkJxPzeM"}
+      ]
+    },
+    "core": {
+      "label": "Core",
+      "muscle_group": "core",
+      "is_lower": false,
+      "exercises": [
+        {"id": "plank",        "name": "Plank",             "video_id": "ASdvN_XEl_c"},
+        {"id": "ab_wheel",     "name": "Ab Wheel",          "video_id": "iOkO3m8Tx2M"},
+        {"id": "leg_raise",    "name": "Hanging Leg Raise", "video_id": "hdng3enaBgU"},
+        {"id": "cable_crunch", "name": "Cable Crunch",      "video_id": "taI4XduLpTk"},
+        {"id": "dead_bug",     "name": "Dead Bug",          "video_id": "g_BYB0R-4Ws"},
+        {"id": "pallof_press", "name": "Pallof Press",      "video_id": "AH_QZLm_0-s"}
+      ]
+    }
+  },
+
+  "templates": {
+    "ppl": {
+      "push":  ["chest_compound","chest_secondary","shoulder_press","lateral_raise","triceps_compound","triceps_isolation","core"],
+      "pull":  ["vertical_pull","horizontal_row","rear_delt","biceps_compound","biceps_isolation","face_pull_shrug","core"],
+      "legs":  ["squat_pattern","hip_hinge","quad_isolation","hamstring_isolation","calves","core"]
+    },
+    "pplul": {
+      "push":  ["chest_compound","chest_secondary","shoulder_press","lateral_raise","triceps_compound","triceps_isolation","core"],
+      "pull":  ["vertical_pull","horizontal_row","rear_delt","biceps_compound","biceps_isolation","face_pull_shrug","core"],
+      "legs":  ["squat_pattern","hip_hinge","quad_isolation","hamstring_isolation","calves","core"],
+      "upper": ["chest_compound","vertical_pull","shoulder_press","horizontal_row","triceps_compound","biceps_compound","lateral_raise","core"],
+      "lower": ["squat_pattern","hip_hinge","quad_isolation","hamstring_isolation","calves","glute_isolation","core"]
+    },
+    "upper_lower": {
+      "upper": ["chest_compound","vertical_pull","shoulder_press","horizontal_row","triceps_compound","biceps_compound","lateral_raise","rear_delt","core"],
+      "lower": ["squat_pattern","hip_hinge","quad_isolation","hamstring_isolation","calves","glute_isolation","core"]
+    },
+    "full_body": {
+      "full":  ["squat_pattern","chest_compound","vertical_pull","hip_hinge","triceps_isolation","biceps_isolation","core"]
+    }
+  }
+}
