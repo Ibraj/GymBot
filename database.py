@@ -4,8 +4,6 @@ from datetime import date
 from config import DB_PATH
 
 
-# ── Schema ───────────────────────────────────────────────────────────────────
-
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS users (
     user_id      INTEGER PRIMARY KEY,
@@ -15,6 +13,7 @@ CREATE TABLE IF NOT EXISTS users (
     is_deload    INTEGER DEFAULT 0,
     last_used    TEXT    DEFAULT '{}',
     pinned       TEXT    DEFAULT '{}',
+    setup_done   INTEGER DEFAULT 0,
     created_at   TEXT    DEFAULT (date('now'))
 );
 
@@ -29,6 +28,7 @@ CREATE TABLE IF NOT EXISTS sessions (
     is_deload    INTEGER DEFAULT 0,
     completed    INTEGER DEFAULT 0,
     exercises    TEXT    DEFAULT '[]',
+    note         TEXT    DEFAULT '',
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
@@ -54,6 +54,19 @@ CREATE TABLE IF NOT EXISTS active_sessions (
 async def init_db():
     async with aiosqlite.connect(DB_PATH) as db:
         await db.executescript(SCHEMA)
+        # Migrate existing DBs — add columns if missing
+        for col, definition in [
+            ("setup_done", "INTEGER DEFAULT 0"),
+            ("note",       "TEXT DEFAULT ''"),
+        ]:
+            try:
+                await db.execute(f"ALTER TABLE users ADD COLUMN {col} {definition}")
+            except Exception:
+                pass
+            try:
+                await db.execute(f"ALTER TABLE sessions ADD COLUMN {col} {definition}")
+            except Exception:
+                pass
         await db.commit()
 
 
@@ -81,7 +94,6 @@ async def upsert_user(user_id: int, **kwargs) -> dict:
         user = await get_user(user_id)
 
     if kwargs:
-        # Serialise dict fields
         for key in ("last_used", "pinned"):
             if key in kwargs and isinstance(kwargs[key], dict):
                 kwargs[key] = json.dumps(kwargs[key])
@@ -143,6 +155,35 @@ async def complete_session(session_id: str, user_id: int) -> None:
         await db.execute("UPDATE sessions SET completed = 1 WHERE session_id = ?", (session_id,))
         await db.execute("DELETE FROM active_sessions WHERE user_id = ?", (user_id,))
         await db.commit()
+
+
+async def add_session_note(session_id: str, note: str) -> None:
+    async with aiosqlite.connect(DB_PATH) as db:
+        await db.execute(
+            "UPDATE sessions SET note = ? WHERE session_id = ?",
+            (note, session_id)
+        )
+        await db.commit()
+
+
+async def get_recent_sessions(user_id: int, limit: int = 7) -> list:
+    async with aiosqlite.connect(DB_PATH) as db:
+        db.row_factory = aiosqlite.Row
+        async with db.execute(
+            """SELECT session_id, date, split, day, intensity, week_number, is_deload, note
+               FROM sessions
+               WHERE user_id = ? AND completed = 1
+               ORDER BY date DESC, session_id DESC
+               LIMIT ?""",
+            (user_id, limit)
+        ) as cur:
+            rows = await cur.fetchall()
+            return [dict(r) for r in rows]
+
+
+async def get_last_session(user_id: int) -> dict | None:
+    sessions = await get_recent_sessions(user_id, limit=1)
+    return sessions[0] if sessions else None
 
 
 # ── Exercise History ──────────────────────────────────────────────────────────
