@@ -52,3 +52,60 @@ VALID_DAYS = {
 DELOAD_WEEK               = 4
 DELOAD_WEIGHT_FACTOR      = 0.6
 CONSECUTIVE_FAIL_THRESHOLD = 3
+
+# ── Extra slots per intensity per day ────────────────────────────────────────
+# Added on top of the base template slots
+EXTRA_SLOTS = {
+    "ppl": {
+        "push": {
+            "moderate": ["rear_delt"],
+            "hardcore": ["rear_delt", "chest_compound"],
+        },
+        "pull": {
+            "moderate": ["horizontal_row"],
+            "hardcore": ["horizontal_row", "biceps_compound"],
+        },
+        "legs": {
+            "moderate": ["quad_isolation"],
+            "hardcore": ["quad_isolation", "hamstring_isolation"],
+        },
+    },
+    "pplul": {
+        "push": {
+            "moderate": ["rear_delt"],
+            "hardcore": ["rear_delt", "chest_compound"],
+        },
+        "pull": {
+            "moderate": ["horizontal_row"],
+            "hardcore": ["horizontal_row", "biceps_compound"],
+        },
+        "legs": {
+            "moderate": ["quad_isolation"],
+            "hardcore": ["quad_isolation", "hamstring_isolation"],
+        },
+        "upper": {
+            "moderate": ["rear_delt"],
+            "hardcore": ["rear_delt", "chest_secondary"],
+        },
+        "lower": {
+            "moderate": ["quad_isolation"],
+            "hardcore": ["quad_isolation", "hamstring_isolation"],
+        },
+    },
+    "upper_lower": {
+        "upper": {
+            "moderate": ["rear_delt"],
+            "hardcore": ["rear_delt", "chest_secondary"],
+        },
+        "lower": {
+            "moderate": ["quad_isolation"],
+            "hardcore": ["quad_isolation", "hamstring_isolation"],
+        },
+    },
+    "full_body": {
+        "full": {
+            "moderate": ["quad_isolation"],
+            "hardcore": ["quad_isolation", "hamstring_isolation"],
+        },
+    },
+}

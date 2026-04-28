@@ -18,6 +18,10 @@ from config import VALID_DAYS, INTENSITY
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
+def _back_button(session_id: str) -> InlineKeyboardButton:
+    return InlineKeyboardButton("⬅️ Back to workout", callback_data=f"back_to_workout:{session_id}")
+
+
 def _rep_keyboard(session_id: str, ex_idx: int, set_num: int) -> InlineKeyboardMarkup:
     rows, row = [], []
     for r in range(0, 21):
@@ -30,6 +34,8 @@ def _rep_keyboard(session_id: str, ex_idx: int, set_num: int) -> InlineKeyboardM
             row = []
     if row:
         rows.append(row)
+    # Add back button as last row
+    rows.append([_back_button(session_id)])
     return InlineKeyboardMarkup(rows)
 
 
@@ -66,7 +72,7 @@ async def _update_workout_message(context, user_id: int, session: dict, exercise
             disable_web_page_preview=True,
         )
     except Exception:
-        pass  # Message may already be identical — Telegram throws if no change
+        pass
 
 
 async def _rest_over_callback(context):
@@ -83,6 +89,53 @@ async def _rest_over_callback(context):
             InlineKeyboardButton("✅ Got it", callback_data="dismiss_rest")
         ]])
     )
+
+
+# ── Back to workout ───────────────────────────────────────────────────────────
+
+async def handle_back_to_workout(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Callback: back_to_workout:{session_id} — resend/show the workout message."""
+    query = update.callback_query
+    await query.answer()
+
+    _, session_id = query.data.split(":", 1)
+    user_id = query.from_user.id
+
+    session = await get_active_session(user_id)
+    if not session or session["session_id"] != session_id:
+        await query.edit_message_text("Session not found.")
+        return
+
+    session_ctx = {
+        "day":         session["day"],
+        "intensity":   session["intensity"],
+        "week_number": session["week_number"],
+        "is_deload":   session["is_deload"],
+    }
+    text, keyboard_rows = build_workout_message_and_keyboard(
+        session_ctx, session["exercises"], session_id
+    )
+
+    # Try to edit current message first, then send new if it fails
+    try:
+        await query.edit_message_text(
+            text,
+            parse_mode="HTML",
+            reply_markup=InlineKeyboardMarkup(keyboard_rows),
+            disable_web_page_preview=True,
+        )
+        # Update stored message id
+        from database import store_workout_message
+        await store_workout_message(user_id, query.message.message_id, query.message.chat_id)
+    except Exception:
+        msg = await query.message.reply_text(
+            text,
+            parse_mode="HTML",
+            reply_markup=InlineKeyboardMarkup(keyboard_rows),
+            disable_web_page_preview=True,
+        )
+        from database import store_workout_message
+        await store_workout_message(user_id, msg.message_id, query.message.chat_id)
 
 
 # ── Set logging ───────────────────────────────────────────────────────────────
@@ -128,7 +181,6 @@ async def handle_reps_logged(update: Update, context: ContextTypes.DEFAULT_TYPE)
     exercises = session["exercises"]
     ex        = exercises[ex_idx]
 
-    # Handle edit vs new
     existing = next((s for s in ex["sets_logged"] if s["set"] == set_num), None)
     if existing:
         existing["reps"] = reps
@@ -156,24 +208,25 @@ async def handle_reps_logged(update: Update, context: ContextTypes.DEFAULT_TYPE)
                     f"✏️ Edit Set {set_num}",
                     callback_data=f"edit_set:{session_id}:{ex_idx}:{set_num}"
                 ),
+            ],[
+                _back_button(session_id)
             ]])
         )
 
         await _cancel_rest_timer(context, user_id)
-        context.job_queue.run_once(
-            _rest_over_callback,
-            when=rest_seconds,
-            chat_id=user_id,
-            data={"exercise_name": ex["name"], "next_set": next_set},
-            name=f"rest_{user_id}",
-        )
+        if context.job_queue:
+            context.job_queue.run_once(
+                _rest_over_callback,
+                when=rest_seconds,
+                chat_id=user_id,
+                data={"exercise_name": ex["name"], "next_set": next_set},
+                name=f"rest_{user_id}",
+            )
 
     else:
-        # All sets done — update original workout message
         total_reps = sum(s["reps"] for s in ex["sets_logged"])
         await _cancel_rest_timer(context, user_id)
 
-        # Edit buttons for each logged set
         edit_buttons = [
             InlineKeyboardButton(
                 f"✏️ Set {s['set']} ({s['reps']})",
@@ -182,16 +235,15 @@ async def handle_reps_logged(update: Update, context: ContextTypes.DEFAULT_TYPE)
             for s in ex["sets_logged"]
         ]
         edit_rows = [edit_buttons[i:i+2] for i in range(0, len(edit_buttons), 2)]
+        edit_rows.append([_back_button(session_id)])
 
         await query.edit_message_text(
             f"✅ <b>{ex['name']}</b> done — "
-            f"{len(ex['sets_logged'])} sets, {total_reps} total reps.\n\n"
-            f"Head back to the workout message to log the next exercise.",
+            f"{len(ex['sets_logged'])} sets, {total_reps} total reps.",
             parse_mode="HTML",
-            reply_markup=InlineKeyboardMarkup(edit_rows) if edit_rows else None
+            reply_markup=InlineKeyboardMarkup(edit_rows)
         )
 
-        # Live-update the original workout message
         await _update_workout_message(context, user_id, session, exercises)
 
 
@@ -220,7 +272,7 @@ async def handle_edit_set(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def handle_dismiss_rest(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Callback: dismiss_rest — delete the rest-over ping message."""
+    """Callback: dismiss_rest"""
     query = update.callback_query
     await query.answer()
     try:
@@ -260,13 +312,14 @@ async def handle_swap(update: Update, context: ContextTypes.DEFAULT_TYPE):
     })
 
     await update_session_exercises(session_id, exercises)
+    await _update_workout_message(context, user_id, session, exercises)
     await query.answer(f"Swapped to {alt['name']}", show_alert=False)
 
-    # Update the original workout message to show new exercise name
-    await _update_workout_message(context, user_id, session, exercises)
+    # Edit the button-press confirmation inline, with back button
     await query.edit_message_text(
-        f"🔄 Swapped to <b>{alt['name']}</b>.\n\nHead back to the workout.",
-        parse_mode="HTML"
+        f"🔄 Swapped to <b>{alt['name']}</b>.",
+        parse_mode="HTML",
+        reply_markup=InlineKeyboardMarkup([[_back_button(session_id)]])
     )
 
 
@@ -335,18 +388,33 @@ async def handle_skip(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def handle_abandon(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Callback: abandon_session — clear session then auto-start pending workout."""
     query = update.callback_query
     await query.answer()
 
-    session = await get_active_session(query.from_user.id)
+    user_id = query.from_user.id
+    session = await get_active_session(user_id)
     if session:
-        await complete_session(session["session_id"], query.from_user.id)
+        await complete_session(session["session_id"], user_id)
 
-    await _cancel_rest_timer(context, query.from_user.id)
-    await query.edit_message_text(
-        "Session abandoned. Start a new one with /workout &lt;day&gt;",
-        parse_mode="HTML"
-    )
+    await _cancel_rest_timer(context, user_id)
+
+    # Auto-start pending session if params were stored
+    pending_day       = context.user_data.pop("pending_day", None)
+    pending_intensity = context.user_data.pop("pending_intensity", None)
+
+    if pending_day and pending_intensity:
+        await query.edit_message_text(
+            f"Starting <b>{pending_day}</b> — <b>{pending_intensity}</b>...",
+            parse_mode="HTML"
+        )
+        from handlers.workout import start_session
+        await start_session(user_id, pending_day, pending_intensity, query.message, context)
+    else:
+        await query.edit_message_text(
+            "Session abandoned. Start a new one with /workout &lt;day&gt;",
+            parse_mode="HTML"
+        )
 
 
 async def handle_resume(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -356,7 +424,10 @@ async def handle_resume(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = query.from_user.id
     session = await get_active_session(user_id)
     if not session:
-        await query.edit_message_text("No active session found. Start a new one with /workout &lt;day&gt;", parse_mode="HTML")
+        await query.edit_message_text(
+            "No active session found. Start a new one with /workout &lt;day&gt;",
+            parse_mode="HTML"
+        )
         return
 
     session_ctx = {
@@ -376,7 +447,6 @@ async def handle_resume(update: Update, context: ContextTypes.DEFAULT_TYPE):
         disable_web_page_preview=True,
     )
 
-    # Update stored message ID to the new message
     from database import store_workout_message
     await store_workout_message(user_id, msg.message_id, query.message.chat_id)
-    await query.edit_message_text("Session resumed 👆", parse_mode="HTML")
+    await query.edit_message_text("Session resumed 👆")
