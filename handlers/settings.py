@@ -161,12 +161,14 @@ async def handle_setup_weight_input(update: Update, context: ContextTypes.DEFAUL
 # ── /exercises ────────────────────────────────────────────────────────────────
 
 CATEGORY_FILTER_MAP = {
-    "push":  ["chest_compound","chest_secondary","shoulder_press","lateral_raise","triceps_compound","triceps_isolation"],
-    "pull":  ["vertical_pull","horizontal_row","rear_delt","biceps_compound","biceps_isolation","face_pull_shrug"],
-    "legs":  ["squat_pattern","hip_hinge","quad_isolation","hamstring_isolation","calves","glute_isolation"],
-    "upper": ["chest_compound","vertical_pull","shoulder_press","horizontal_row","triceps_compound","biceps_compound","lateral_raise","rear_delt"],
-    "lower": ["squat_pattern","hip_hinge","quad_isolation","hamstring_isolation","calves","glute_isolation"],
-    "core":  ["core"],
+    "push":     ["chest_compound","chest_secondary","shoulder_press","lateral_raise","triceps_compound","triceps_isolation"],
+    "pull":     ["vertical_pull","horizontal_row","rear_delt","biceps_compound","biceps_isolation","face_pull_shrug","traps","forearms"],
+    "legs":     ["squat_pattern","hip_hinge","quad_isolation","hamstring_isolation","calves","glute_isolation"],
+    "upper":    ["chest_compound","vertical_pull","shoulder_press","horizontal_row","triceps_compound","biceps_compound","lateral_raise","rear_delt","traps","forearms"],
+    "lower":    ["squat_pattern","hip_hinge","quad_isolation","hamstring_isolation","calves","glute_isolation"],
+    "core":     ["core"],
+    "forearms": ["forearms"],
+    "traps":    ["traps"],
 }
 
 async def exercises_command(update: Update, context: ContextTypes.DEFAULT_TYPE):

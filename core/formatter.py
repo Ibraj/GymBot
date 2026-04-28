@@ -23,6 +23,8 @@ SLOT_EMOJI = {
     "calves":             "🦿",
     "glute_isolation":    "🍑",
     "core":               "🎯",
+    "forearms":           "💪",
+    "traps":              "🏔️",
 }
 
 
