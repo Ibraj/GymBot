@@ -245,7 +245,7 @@ async def handle_swap(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ex        = exercises[ex_idx]
 
     user = await upsert_user(user_id)
-    alt  = get_alternative(ex["slot"], ex["exercise_id"], user["pinned"])
+    alt  = get_alternative(ex["slot"], ex["exercise_id"], user["pinned"], session["intensity"])
 
     if not alt:
         await query.answer("No alternative available for this slot.", show_alert=True)

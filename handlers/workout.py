@@ -62,7 +62,7 @@ async def workout_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     exercises_data = []
     for slot in slots:
-        ex      = pick_exercise(slot, user["last_used"], user["pinned"])
+        ex      = pick_exercise(slot, user["last_used"], user["pinned"], intensity)
         history = await get_exercise_history(user_id, ex["id"])
         weight  = history["current_weight_kg"]
 

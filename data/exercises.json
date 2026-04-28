@@ -8,37 +8,106 @@
         {
           "id": "bench_bar",
           "name": "Barbell Bench Press",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "rT7DgljzYDg"
         },
         {
           "id": "bench_db",
           "name": "Dumbbell Bench Press",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "VmB1G1K7v94"
         },
         {
           "id": "chest_machine",
           "name": "Machine Chest Press",
+          "difficulty": [
+            "easy"
+          ],
           "video_id": "Dg7ricMvQcM"
         },
         {
           "id": "pushup",
           "name": "Push-ups",
+          "difficulty": [
+            "easy"
+          ],
           "video_id": "IODxDxX7oi4"
         },
         {
           "id": "dips_chest",
           "name": "Weighted Dips (Chest)",
-          "video_id": "https://www.youtube.com/results?search_query=weighted+dips+chest+form+jeff+nippard"
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=weighted+chest+dips+proper+form"
         },
         {
           "id": "cable_cross",
           "name": "Cable Crossover",
-          "video_id": "https://www.youtube.com/results?search_query=cable+crossover+chest+proper+form"
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "Iwe6AmxahH8"
         },
         {
           "id": "floor_press",
           "name": "Barbell Floor Press",
-          "video_id": "https://www.youtube.com/results?search_query=barbell+floor+press+proper+form+alan+thrall"
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=barbell+floor+press+proper+form"
+        },
+        {
+          "id": "spoto_press",
+          "name": "Spoto Press",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=spoto+press+bench+press+variation+form"
+        },
+        {
+          "id": "pin_press",
+          "name": "Pin Press",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=pin+press+bench+press+proper+form"
+        },
+        {
+          "id": "db_floor_press",
+          "name": "DB Floor Press",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+floor+press+proper+form"
+        },
+        {
+          "id": "smith_bench",
+          "name": "Smith Machine Bench",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=smith+machine+bench+press+proper+form"
+        },
+        {
+          "id": "low_cable_fly",
+          "name": "Low-to-High Cable Fly",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=low+to+high+cable+fly+chest+form"
         }
       ]
     },
@@ -50,32 +119,89 @@
         {
           "id": "incline_db",
           "name": "Incline DB Press",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "8iPEnn-ltC8"
         },
         {
           "id": "cable_fly",
           "name": "Cable Fly",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "Iwe6AmxahH8"
         },
         {
           "id": "pec_deck",
           "name": "Pec Deck",
+          "difficulty": [
+            "easy"
+          ],
           "video_id": "Z57CtFmRMxA"
         },
         {
           "id": "incline_bar",
           "name": "Incline Barbell Press",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=incline+barbell+press+proper+form+jeff+nippard"
         },
         {
           "id": "decline_db",
           "name": "Decline DB Press",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=decline+dumbbell+press+proper+form"
         },
         {
           "id": "svend_press",
           "name": "Svend Press",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=svend+press+chest+exercise+form"
+        },
+        {
+          "id": "incline_cable",
+          "name": "Incline Cable Fly",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=incline+cable+fly+chest+upper+form"
+        },
+        {
+          "id": "decline_bar",
+          "name": "Decline Barbell Press",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=decline+barbell+press+proper+form"
+        },
+        {
+          "id": "smith_incline",
+          "name": "Smith Machine Incline",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=smith+machine+incline+press+proper+form"
+        },
+        {
+          "id": "db_pullover",
+          "name": "DB Pullover",
+          "difficulty": [
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+pullover+chest+form"
         }
       ]
     },
@@ -87,32 +213,89 @@
         {
           "id": "ohp_bar",
           "name": "Overhead Barbell Press",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "CnBmiBqp-AI"
         },
         {
           "id": "ohp_db",
           "name": "Dumbbell Shoulder Press",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "qEwKCR5JCog"
         },
         {
           "id": "arnold",
           "name": "Arnold Press",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "6Z15_WdXmVw"
         },
         {
           "id": "seated_ohp",
           "name": "Seated Barbell Press",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=seated+overhead+barbell+press+form"
         },
         {
           "id": "landmine_press",
           "name": "Landmine Press",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=landmine+press+shoulder+proper+form"
         },
         {
           "id": "push_press",
           "name": "Push Press",
-          "video_id": "https://www.youtube.com/results?search_query=push+press+proper+form+alan+thrall"
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=push+press+proper+form"
+        },
+        {
+          "id": "machine_press",
+          "name": "Machine Shoulder Press",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=machine+shoulder+press+proper+form"
+        },
+        {
+          "id": "smith_ohp",
+          "name": "Smith Machine OHP",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=smith+machine+overhead+press+form"
+        },
+        {
+          "id": "z_press",
+          "name": "Z-Press",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=z+press+overhead+press+variation+form"
+        },
+        {
+          "id": "cable_ohp",
+          "name": "Cable Shoulder Press",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+shoulder+press+form"
         }
       ]
     },
@@ -124,27 +307,80 @@
         {
           "id": "lateral_db",
           "name": "DB Lateral Raise",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "3VcKaXpzqRo"
         },
         {
           "id": "lateral_cable",
           "name": "Cable Lateral Raise",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "kDqklk1KRAM"
         },
         {
           "id": "upright_row",
           "name": "Upright Row",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=upright+row+proper+form+jeff+nippard"
         },
         {
           "id": "lateral_machine",
           "name": "Machine Lateral Raise",
+          "difficulty": [
+            "easy"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=machine+lateral+raise+proper+form"
         },
         {
           "id": "lateral_lean",
           "name": "Leaning Cable Lateral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=leaning+cable+lateral+raise+form"
+        },
+        {
+          "id": "plate_raise",
+          "name": "Plate Front Raise",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=plate+front+raise+shoulders+form"
+        },
+        {
+          "id": "cable_front",
+          "name": "Cable Front Raise",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+front+raise+shoulders+form"
+        },
+        {
+          "id": "db_front_raise",
+          "name": "DB Front Raise",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+front+raise+proper+form"
+        },
+        {
+          "id": "lu_raise",
+          "name": "Lu Raise",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=lu+raise+shoulder+exercise+form"
         }
       ]
     },
@@ -156,27 +392,72 @@
         {
           "id": "cgbp",
           "name": "Close-Grip Bench Press",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "nEF0bv2Fi-Y"
         },
         {
           "id": "pushdown_bar",
           "name": "Triceps Pushdown (Bar)",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "vB5OHsJ3EME"
         },
         {
           "id": "dips_tri",
           "name": "Triceps Dips",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=triceps+dips+proper+form+jeff+nippard"
         },
         {
           "id": "pushdown_rope",
           "name": "Rope Pushdown",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=rope+tricep+pushdown+proper+form"
         },
         {
           "id": "tate_press",
           "name": "Tate Press",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=tate+press+triceps+proper+form"
+        },
+        {
+          "id": "jm_press",
+          "name": "JM Press",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=jm+press+triceps+proper+form"
+        },
+        {
+          "id": "machine_tri",
+          "name": "Machine Triceps Press",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=machine+triceps+press+proper+form"
+        },
+        {
+          "id": "cable_tri_bar",
+          "name": "Cable Pushdown (V-Bar)",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=v+bar+tricep+pushdown+proper+form"
         }
       ]
     },
@@ -188,27 +469,73 @@
         {
           "id": "tri_overhead",
           "name": "Overhead Triceps Ext",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "YbX7Wd8jQ-Q"
         },
         {
           "id": "skulls",
           "name": "Skull Crushers",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "d_KZxkY_0cM"
         },
         {
           "id": "tri_kickback",
           "name": "DB Triceps Kickback",
+          "difficulty": [
+            "easy"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=dumbbell+triceps+kickback+proper+form"
         },
         {
           "id": "cable_overhead",
           "name": "Cable Overhead Ext",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=cable+overhead+triceps+extension+form"
         },
         {
           "id": "single_ext",
           "name": "Single-arm DB Ext",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=single+arm+dumbbell+tricep+extension+form"
+        },
+        {
+          "id": "db_skulls",
+          "name": "DB Skull Crushers",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+skull+crushers+proper+form"
+        },
+        {
+          "id": "ez_skulls",
+          "name": "EZ-Bar Skull Crushers",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=ez+bar+skull+crushers+proper+form"
+        },
+        {
+          "id": "cable_kickback",
+          "name": "Cable Kickback",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+tricep+kickback+proper+form"
         }
       ]
     },
@@ -220,32 +547,89 @@
         {
           "id": "pullup",
           "name": "Pull-ups",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "eGo4IYlbE5g"
         },
         {
           "id": "pulldown",
           "name": "Lat Pulldown",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "CAwf7n6Luuc"
         },
         {
           "id": "chinup",
           "name": "Chin-ups",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=chin+ups+proper+form+jeff+nippard"
         },
         {
           "id": "neutral_pullup",
           "name": "Neutral-Grip Pull-up",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=neutral+grip+pullup+proper+form"
         },
         {
           "id": "single_pulldown",
           "name": "Single-arm Pulldown",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=single+arm+lat+pulldown+proper+form"
         },
         {
           "id": "straight_pulldown",
           "name": "Straight-arm Pulldown",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=straight+arm+pulldown+lats+form"
+        },
+        {
+          "id": "machine_pulldown",
+          "name": "Machine Pulldown",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=machine+lat+pulldown+proper+form"
+        },
+        {
+          "id": "wide_pulldown",
+          "name": "Wide-Grip Pulldown",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=wide+grip+lat+pulldown+proper+form"
+        },
+        {
+          "id": "rev_pulldown",
+          "name": "Reverse-Grip Pulldown",
+          "difficulty": [
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=reverse+grip+lat+pulldown+proper+form"
+        },
+        {
+          "id": "weighted_pullup",
+          "name": "Weighted Pull-up",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=weighted+pullup+proper+form"
         }
       ]
     },
@@ -257,37 +641,98 @@
         {
           "id": "row_bar",
           "name": "Barbell Row",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "G8l_8chR5BE"
         },
         {
           "id": "row_db",
           "name": "DB Row",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "roCP2zvD5Js"
         },
         {
           "id": "row_cable",
           "name": "Cable Row",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "UCXmny8EttA"
         },
         {
           "id": "chest_row",
           "name": "Chest-Supported Row",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=chest+supported+row+proper+form+jeff+nippard"
         },
         {
           "id": "pendlay_row",
           "name": "Pendlay Row",
+          "difficulty": [
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=pendlay+row+proper+form+alan+thrall"
         },
         {
           "id": "meadows_row",
           "name": "Meadows Row",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=meadows+row+proper+form"
         },
         {
           "id": "seal_row",
           "name": "Seal Row",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=seal+row+proper+form+back+exercise"
+        },
+        {
+          "id": "machine_row",
+          "name": "Machine Row",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=machine+row+proper+form+back"
+        },
+        {
+          "id": "t_bar_row",
+          "name": "T-Bar Row",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=t+bar+row+proper+form"
+        },
+        {
+          "id": "iso_row",
+          "name": "Iso-Lateral Row",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=iso+lateral+row+machine+proper+form"
+        },
+        {
+          "id": "incline_row",
+          "name": "Incline DB Row",
+          "difficulty": [
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=incline+dumbbell+row+proper+form"
         }
       ]
     },
@@ -299,27 +744,74 @@
         {
           "id": "face_pull",
           "name": "Face Pull",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "HSoHeSJFOWs"
         },
         {
           "id": "rev_fly",
           "name": "Reverse Fly",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "imRBoJqozKI"
         },
         {
           "id": "band_pull_apart",
           "name": "Band Pull-Apart",
+          "difficulty": [
+            "easy"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=band+pull+apart+rear+delt+form"
         },
         {
           "id": "cable_rear_fly",
           "name": "Cable Rear Delt Fly",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=cable+rear+delt+fly+proper+form"
         },
         {
           "id": "w_raise",
           "name": "W-Raise",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=w+raise+rear+delt+exercise+form"
+        },
+        {
+          "id": "ytwl",
+          "name": "YTWL Raises",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=YTWL+raises+rear+delt+rotator+cuff+form"
+        },
+        {
+          "id": "machine_fly",
+          "name": "Machine Rear Delt Fly",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=machine+rear+delt+fly+pec+deck+reverse+form"
+        },
+        {
+          "id": "prone_y_raise",
+          "name": "Prone Y Raise",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=prone+y+raise+rear+delt+form"
         }
       ]
     },
@@ -331,27 +823,71 @@
         {
           "id": "curl_bar",
           "name": "Barbell Curl",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "kwG2ipFRgfo"
         },
         {
           "id": "curl_hammer",
           "name": "Hammer Curl",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "zC3nMkuokxs"
         },
         {
           "id": "cable_curl",
           "name": "Cable Curl",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=cable+bicep+curl+proper+form+jeff+nippard"
         },
         {
           "id": "ez_curl",
           "name": "EZ-Bar Curl",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=ez+bar+curl+proper+form"
         },
         {
           "id": "drag_curl",
           "name": "Drag Curl",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=drag+curl+biceps+proper+form"
+        },
+        {
+          "id": "db_curl",
+          "name": "Dumbbell Curl",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+bicep+curl+proper+form"
+        },
+        {
+          "id": "cross_body",
+          "name": "Cross-Body Hammer Curl",
+          "difficulty": [
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cross+body+hammer+curl+proper+form"
+        },
+        {
+          "id": "machine_curl",
+          "name": "Machine Bicep Curl",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=machine+bicep+curl+proper+form"
         }
       ]
     },
@@ -363,59 +899,179 @@
         {
           "id": "curl_incline",
           "name": "Incline DB Curl",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "soxrZlIl35U"
         },
         {
           "id": "curl_conc",
           "name": "Concentration Curl",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "Jvj2wV0vOYU"
         },
         {
           "id": "preacher_curl",
           "name": "Preacher Curl",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=preacher+curl+proper+form+jeff+nippard"
         },
         {
           "id": "spider_curl",
           "name": "Spider Curl",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=spider+curl+biceps+proper+form"
         },
         {
           "id": "cable_iso_curl",
           "name": "Single-arm Cable Curl",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=single+arm+cable+bicep+curl+form"
         },
         {
           "id": "zottman",
           "name": "Zottman Curl",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=zottman+curl+proper+form+biceps"
+        },
+        {
+          "id": "cable_21s",
+          "name": "Cable 21s",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=bicep+21s+cable+curl+form"
+        },
+        {
+          "id": "high_cable_curl",
+          "name": "High Cable Curl",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=high+cable+bicep+curl+form"
+        },
+        {
+          "id": "machine_preacher",
+          "name": "Machine Preacher Curl",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=machine+preacher+curl+proper+form"
         }
       ]
     },
-    "face_pull_shrug": {
-      "label": "Face Pull / Shrug",
+    "traps": {
+      "label": "Traps",
       "muscle_group": "upper",
       "is_lower": false,
       "exercises": [
         {
-          "id": "face_pull",
-          "name": "Face Pull",
-          "video_id": "HSoHeSJFOWs"
+          "id": "shrug_bar",
+          "name": "Barbell Shrug",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=barbell+shrug+proper+form+traps"
         },
         {
           "id": "shrug_db",
-          "name": "DB Shrug",
-          "video_id": "cJRVVxmytaM"
+          "name": "Dumbbell Shrug",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+shrug+proper+form+traps"
         },
         {
-          "id": "shrug_bar",
-          "name": "Barbell Shrug",
-          "video_id": "https://www.youtube.com/results?search_query=barbell+shrug+proper+form"
-        },
-        {
-          "id": "cable_shrug",
+          "id": "shrug_cable",
           "name": "Cable Shrug",
-          "video_id": "https://www.youtube.com/results?search_query=cable+shrug+trap+exercise+form"
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+shrug+traps+proper+form"
+        },
+        {
+          "id": "trap_bar_shrug",
+          "name": "Trap Bar Shrug",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=trap+bar+shrug+proper+form"
+        },
+        {
+          "id": "rack_pull_trap",
+          "name": "Rack Pull (Trap Focus)",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=rack+pull+trap+focus+proper+form"
+        },
+        {
+          "id": "overhead_shrug",
+          "name": "Overhead Shrug",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=overhead+shrug+upper+trap+exercise+form"
+        },
+        {
+          "id": "farmers_trap",
+          "name": "Farmer's Carry (Traps)",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=farmers+carry+trap+development+form"
+        },
+        {
+          "id": "face_pull_trap",
+          "name": "Face Pull",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "HSoHeSJFOWs"
+        },
+        {
+          "id": "snatch_shrug",
+          "name": "Snatch-Grip Shrug",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=snatch+grip+shrug+upper+traps+form"
+        },
+        {
+          "id": "iso_shrug",
+          "name": "Isometric Shrug Hold",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=isometric+shrug+hold+trap+exercise"
         }
       ]
     },
@@ -427,37 +1083,88 @@
         {
           "id": "squat_bar",
           "name": "Barbell Back Squat",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "bEv6CCg2BC8"
         },
         {
           "id": "squat_goblet",
           "name": "Goblet Squat",
+          "difficulty": [
+            "easy"
+          ],
           "video_id": "MeIiIdhvXT4"
         },
         {
           "id": "leg_press",
           "name": "Leg Press",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "IZxyjW7MPJQ"
         },
         {
           "id": "front_squat",
           "name": "Front Squat",
+          "difficulty": [
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=front+squat+proper+form+alan+thrall"
         },
         {
           "id": "box_squat",
           "name": "Box Squat",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=box+squat+proper+form+alan+thrall"
         },
         {
           "id": "safety_squat",
           "name": "Safety Bar Squat",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=safety+bar+squat+proper+form"
         },
         {
           "id": "zercher",
           "name": "Zercher Squat",
-          "video_id": "https://www.youtube.com/results?search_query=zercher+squat+proper+form+alan+thrall"
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=zercher+squat+proper+form"
+        },
+        {
+          "id": "smith_squat",
+          "name": "Smith Machine Squat",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=smith+machine+squat+proper+form"
+        },
+        {
+          "id": "pause_squat",
+          "name": "Pause Squat",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=pause+squat+proper+form+alan+thrall"
+        },
+        {
+          "id": "high_leg_press",
+          "name": "High-Foot Leg Press",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=high+foot+placement+leg+press+glutes+form"
         }
       ]
     },
@@ -469,42 +1176,91 @@
         {
           "id": "rdl",
           "name": "Romanian Deadlift",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "JCXZnBiOcH8"
         },
         {
           "id": "deadlift",
           "name": "Barbell Deadlift",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "VL5Ab0T_S8I"
-        },
-        {
-          "id": "kb_swing",
-          "name": "Kettlebell Swing",
-          "video_id": "YSxHkQUEZQs"
         },
         {
           "id": "trap_bar_dl",
           "name": "Trap Bar Deadlift",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=trap+bar+deadlift+proper+form+alan+thrall"
         },
         {
           "id": "sumo_dl",
           "name": "Sumo Deadlift",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=sumo+deadlift+proper+form+alan+thrall"
         },
         {
           "id": "single_rdl",
           "name": "Single-leg RDL",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=single+leg+romanian+deadlift+proper+form+jeff+nippard"
         },
         {
           "id": "good_morning",
           "name": "Good Morning",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=good+morning+exercise+proper+form+alan+thrall"
         },
         {
           "id": "rack_pull",
           "name": "Rack Pull",
+          "difficulty": [
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=rack+pull+deadlift+proper+form"
+        },
+        {
+          "id": "db_rdl",
+          "name": "Dumbbell RDL",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+romanian+deadlift+proper+form"
+        },
+        {
+          "id": "stiff_leg_dl",
+          "name": "Stiff-Leg Deadlift",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=stiff+leg+deadlift+proper+form"
+        },
+        {
+          "id": "deficit_dl",
+          "name": "Deficit Deadlift",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=deficit+deadlift+proper+form"
         }
       ]
     },
@@ -516,37 +1272,89 @@
         {
           "id": "leg_ext",
           "name": "Leg Extension",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "m0FOpMEgB_Y"
         },
         {
           "id": "bulgarian",
           "name": "Bulgarian Split Squat",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=bulgarian+split+squat+proper+form+jeff+nippard"
         },
         {
           "id": "hack_squat",
           "name": "Hack Squat (Machine)",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=hack+squat+machine+proper+form"
         },
         {
           "id": "lunge_bar",
           "name": "Barbell Lunge",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=barbell+lunge+proper+form"
+        },
+        {
+          "id": "lunge_db",
+          "name": "Dumbbell Lunge",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+lunge+proper+form"
         },
         {
           "id": "step_up",
           "name": "Step-Up",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=step+up+exercise+quads+proper+form"
-        },
-        {
-          "id": "wall_sit",
-          "name": "Weighted Wall Sit",
-          "video_id": "https://www.youtube.com/results?search_query=weighted+wall+sit+quad+exercise"
         },
         {
           "id": "sissy_squat",
           "name": "Sissy Squat",
+          "difficulty": [
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=sissy+squat+proper+form+quads"
+        },
+        {
+          "id": "leg_press_iso",
+          "name": "Single-leg Leg Press",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=single+leg+press+quad+isolation+form"
+        },
+        {
+          "id": "walking_lunge",
+          "name": "Walking Lunge",
+          "difficulty": [
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=walking+lunge+proper+form+quads"
+        },
+        {
+          "id": "spanish_squat",
+          "name": "Spanish Squat",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=spanish+squat+quad+exercise+form"
         }
       ]
     },
@@ -557,33 +1365,73 @@
       "exercises": [
         {
           "id": "leg_curl",
-          "name": "Leg Curl",
+          "name": "Lying Leg Curl",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "1Tq3QdYUuHs"
         },
         {
           "id": "nordic_curl",
           "name": "Nordic Curl",
+          "difficulty": [
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=nordic+curl+hamstring+proper+form+jeff+nippard"
         },
         {
           "id": "seated_leg_curl",
           "name": "Seated Leg Curl",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=seated+leg+curl+hamstring+proper+form"
         },
         {
           "id": "db_leg_curl",
           "name": "DB Leg Curl",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=dumbbell+leg+curl+lying+proper+form"
         },
         {
           "id": "glute_ham_raise",
           "name": "Glute-Ham Raise",
+          "difficulty": [
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=glute+ham+raise+proper+form"
         },
         {
           "id": "cable_leg_curl",
           "name": "Cable Leg Curl",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=cable+leg+curl+standing+hamstring+form"
+        },
+        {
+          "id": "single_leg_curl",
+          "name": "Single-leg Curl",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=single+leg+curl+machine+hamstring+form"
+        },
+        {
+          "id": "swiss_curl",
+          "name": "Swiss Ball Leg Curl",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=swiss+ball+leg+curl+hamstring+form"
         }
       ]
     },
@@ -595,27 +1443,67 @@
         {
           "id": "calf_stand",
           "name": "Standing Calf Raise",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "gwLzBv7i5UA"
         },
         {
           "id": "calf_seat",
           "name": "Seated Calf Raise",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "JbyjNymZOt0"
         },
         {
           "id": "calf_leg_press",
           "name": "Leg Press Calf Raise",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=leg+press+calf+raise+proper+form"
         },
         {
           "id": "donkey_calf",
           "name": "Donkey Calf Raise",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=donkey+calf+raise+proper+form"
         },
         {
           "id": "single_calf",
           "name": "Single-leg Calf Raise",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=single+leg+calf+raise+proper+form"
+        },
+        {
+          "id": "smith_calf",
+          "name": "Smith Machine Calf Raise",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=smith+machine+calf+raise+proper+form"
+        },
+        {
+          "id": "pause_calf",
+          "name": "Pause Calf Raise",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=pause+calf+raise+slow+tempo+form"
         }
       ]
     },
@@ -627,99 +1515,74 @@
         {
           "id": "hip_thrust",
           "name": "Hip Thrust",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "xDmFkJxPzeM"
         },
         {
           "id": "cable_kickback",
           "name": "Cable Kickback",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=cable+glute+kickback+proper+form"
         },
         {
           "id": "bstance_thrust",
           "name": "B-Stance Hip Thrust",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=b+stance+hip+thrust+proper+form"
         },
         {
           "id": "glute_bridge",
           "name": "Barbell Glute Bridge",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=barbell+glute+bridge+proper+form+jeff+nippard"
-        },
-        {
-          "id": "sumo_deadlift_g",
-          "name": "Sumo Deadlift (Glutes)",
-          "video_id": "https://www.youtube.com/results?search_query=sumo+deadlift+glute+focus+form"
         },
         {
           "id": "abductor",
           "name": "Machine Abductor",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=hip+abductor+machine+proper+form+glutes"
-        }
-      ]
-    },
-    "core": {
-      "label": "Core",
-      "muscle_group": "core",
-      "is_lower": false,
-      "exercises": [
-        {
-          "id": "plank",
-          "name": "Plank",
-          "video_id": "ASdvN_XEl_c"
         },
         {
-          "id": "ab_wheel",
-          "name": "Ab Wheel",
-          "video_id": "iOkO3m8Tx2M"
+          "id": "single_thrust",
+          "name": "Single-leg Hip Thrust",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=single+leg+hip+thrust+proper+form"
         },
         {
-          "id": "leg_raise",
-          "name": "Hanging Leg Raise",
-          "video_id": "hdng3enaBgU"
+          "id": "frog_pump",
+          "name": "Frog Pump",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=frog+pump+glute+exercise+form"
         },
         {
-          "id": "cable_crunch",
-          "name": "Cable Crunch",
-          "video_id": "taI4XduLpTk"
-        },
-        {
-          "id": "dead_bug",
-          "name": "Dead Bug",
-          "video_id": "g_BYB0R-4Ws"
-        },
-        {
-          "id": "pallof_press",
-          "name": "Pallof Press",
-          "video_id": "AH_QZLm_0-s"
-        },
-        {
-          "id": "dragon_flag",
-          "name": "Dragon Flag",
-          "video_id": "https://www.youtube.com/results?search_query=dragon+flag+core+exercise+proper+form"
-        },
-        {
-          "id": "hollow_hold",
-          "name": "Hollow Body Hold",
-          "video_id": "https://www.youtube.com/results?search_query=hollow+body+hold+core+proper+form"
-        },
-        {
-          "id": "copenhagen",
-          "name": "Copenhagen Plank",
-          "video_id": "https://www.youtube.com/results?search_query=copenhagen+plank+proper+form+core"
-        },
-        {
-          "id": "suitcase_carry",
-          "name": "Suitcase Carry",
-          "video_id": "https://www.youtube.com/results?search_query=suitcase+carry+core+exercise+form"
-        },
-        {
-          "id": "v_up",
-          "name": "V-Up",
-          "video_id": "https://www.youtube.com/results?search_query=v+up+ab+exercise+proper+form"
-        },
-        {
-          "id": "russian_twist",
-          "name": "Russian Twist",
-          "video_id": "https://www.youtube.com/results?search_query=russian+twist+weighted+proper+form"
+          "id": "cable_pull_through",
+          "name": "Cable Pull-Through",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+pull+through+glutes+form"
         }
       ]
     },
@@ -731,79 +1594,219 @@
         {
           "id": "wrist_curl",
           "name": "Wrist Curl (Barbell)",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=barbell+wrist+curl+forearms+proper+form"
         },
         {
           "id": "rev_wrist_curl",
           "name": "Reverse Wrist Curl",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=reverse+wrist+curl+forearms+proper+form"
         },
         {
           "id": "rev_curl",
           "name": "Reverse Barbell Curl",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=reverse+barbell+curl+forearms+brachialis+form"
         },
         {
           "id": "farmers_carry",
           "name": "Farmer's Carry",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=farmers+carry+proper+form+forearms+grip"
         },
         {
           "id": "plate_pinch",
           "name": "Plate Pinch",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=plate+pinch+grip+strength+forearms"
         },
         {
           "id": "hammer_iso",
           "name": "Hammer Curl ISO Hold",
+          "difficulty": [
+            "moderate"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=hammer+curl+isometric+hold+forearms"
         },
         {
           "id": "towel_pullup",
           "name": "Towel Pull-up",
+          "difficulty": [
+            "hardcore"
+          ],
           "video_id": "https://www.youtube.com/results?search_query=towel+pullup+grip+strength+forearms"
+        },
+        {
+          "id": "db_wrist_curl",
+          "name": "DB Wrist Curl",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+wrist+curl+forearms+form"
+        },
+        {
+          "id": "cable_wrist_curl",
+          "name": "Cable Wrist Curl",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+wrist+curl+forearms+form"
         }
       ]
     },
-    "traps": {
-      "label": "Traps",
-      "muscle_group": "upper",
+    "core": {
+      "label": "Core",
+      "muscle_group": "core",
       "is_lower": false,
       "exercises": [
         {
-          "id": "shrug_bar2",
-          "name": "Barbell Shrug",
-          "video_id": "https://www.youtube.com/results?search_query=barbell+shrug+proper+form+traps"
+          "id": "plank",
+          "name": "Plank",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "ASdvN_XEl_c"
         },
         {
-          "id": "shrug_db2",
-          "name": "Dumbbell Shrug",
-          "video_id": "https://www.youtube.com/results?search_query=dumbbell+shrug+proper+form+traps"
+          "id": "ab_wheel",
+          "name": "Ab Wheel",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "iOkO3m8Tx2M"
         },
         {
-          "id": "shrug_cable",
-          "name": "Cable Shrug",
-          "video_id": "https://www.youtube.com/results?search_query=cable+shrug+traps+proper+form"
+          "id": "leg_raise",
+          "name": "Hanging Leg Raise",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "hdng3enaBgU"
         },
         {
-          "id": "trap_bar_shrug",
-          "name": "Trap Bar Shrug",
-          "video_id": "https://www.youtube.com/results?search_query=trap+bar+shrug+proper+form"
+          "id": "cable_crunch",
+          "name": "Cable Crunch",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "taI4XduLpTk"
         },
         {
-          "id": "rack_pull_trap",
-          "name": "Rack Pull (Trap Focus)",
-          "video_id": "https://www.youtube.com/results?search_query=rack+pull+trap+focus+proper+form"
+          "id": "dead_bug",
+          "name": "Dead Bug",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "g_BYB0R-4Ws"
         },
         {
-          "id": "overhead_shrug",
-          "name": "Overhead Shrug",
-          "video_id": "https://www.youtube.com/results?search_query=overhead+shrug+traps+upper+trap+exercise"
+          "id": "pallof_press",
+          "name": "Pallof Press",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "AH_QZLm_0-s"
         },
         {
-          "id": "farmers_trap",
-          "name": "Farmer's Carry (Traps)",
-          "video_id": "https://www.youtube.com/results?search_query=farmers+carry+trap+development+form"
+          "id": "dragon_flag",
+          "name": "Dragon Flag",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dragon+flag+core+exercise+proper+form"
+        },
+        {
+          "id": "hollow_hold",
+          "name": "Hollow Body Hold",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=hollow+body+hold+core+proper+form"
+        },
+        {
+          "id": "copenhagen",
+          "name": "Copenhagen Plank",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=copenhagen+plank+proper+form+core"
+        },
+        {
+          "id": "suitcase_carry",
+          "name": "Suitcase Carry",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=suitcase+carry+core+exercise+form"
+        },
+        {
+          "id": "v_up",
+          "name": "V-Up",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=v+up+ab+exercise+proper+form"
+        },
+        {
+          "id": "russian_twist",
+          "name": "Russian Twist",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=russian+twist+weighted+proper+form"
+        },
+        {
+          "id": "weighted_crunch",
+          "name": "Weighted Crunch",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=weighted+crunch+abs+proper+form"
+        },
+        {
+          "id": "dragon_flag_neg",
+          "name": "Dragon Flag Negative",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dragon+flag+negative+core+form"
+        },
+        {
+          "id": "l_sit",
+          "name": "L-Sit Hold",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=l+sit+hold+core+exercise+form"
         }
       ]
     }
@@ -825,10 +1828,9 @@
         "rear_delt",
         "biceps_compound",
         "biceps_isolation",
-        "face_pull_shrug",
-        "core",
+        "traps",
         "forearms",
-        "traps"
+        "core"
       ],
       "legs": [
         "squat_pattern",
@@ -836,6 +1838,7 @@
         "quad_isolation",
         "hamstring_isolation",
         "calves",
+        "glute_isolation",
         "core"
       ]
     },
@@ -855,10 +1858,9 @@
         "rear_delt",
         "biceps_compound",
         "biceps_isolation",
-        "face_pull_shrug",
-        "core",
+        "traps",
         "forearms",
-        "traps"
+        "core"
       ],
       "legs": [
         "squat_pattern",
@@ -866,6 +1868,7 @@
         "quad_isolation",
         "hamstring_isolation",
         "calves",
+        "glute_isolation",
         "core"
       ],
       "upper": [
@@ -876,9 +1879,8 @@
         "triceps_compound",
         "biceps_compound",
         "lateral_raise",
-        "core",
-        "forearms",
-        "traps"
+        "traps",
+        "core"
       ],
       "lower": [
         "squat_pattern",
@@ -900,9 +1902,9 @@
         "biceps_compound",
         "lateral_raise",
         "rear_delt",
-        "core",
+        "traps",
         "forearms",
-        "traps"
+        "core"
       ],
       "lower": [
         "squat_pattern",
@@ -922,9 +1924,8 @@
         "hip_hinge",
         "triceps_isolation",
         "biceps_isolation",
-        "core",
-        "forearms",
-        "traps"
+        "traps",
+        "core"
       ]
     }
   }
