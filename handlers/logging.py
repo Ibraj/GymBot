@@ -34,6 +34,8 @@ def _rep_keyboard(session_id: str, ex_idx: int, set_num: int) -> InlineKeyboardM
 
 
 async def _cancel_rest_timer(context, user_id: int):
+    if not context.job_queue:
+        return
     for job in context.job_queue.get_jobs_by_name(f"rest_{user_id}"):
         job.schedule_removal()
 

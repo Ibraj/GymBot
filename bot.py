@@ -75,7 +75,14 @@ async def post_init(app: Application):
 
 
 def main():
-    app = Application.builder().token(BOT_TOKEN).post_init(post_init).build()
+    from telegram.ext import JobQueue
+    app = (
+        Application.builder()
+        .token(BOT_TOKEN)
+        .post_init(post_init)
+        .job_queue(JobQueue())
+        .build()
+    )
 
     # Commands
     app.add_handler(CommandHandler("start",     start_command))
