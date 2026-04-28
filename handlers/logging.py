@@ -351,4 +351,32 @@ async def handle_abandon(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def handle_resume(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
-    await query.answer("Resuming — scroll up to find your workout.", show_alert=True)
+    await query.answer()
+
+    user_id = query.from_user.id
+    session = await get_active_session(user_id)
+    if not session:
+        await query.edit_message_text("No active session found. Start a new one with /workout &lt;day&gt;", parse_mode="HTML")
+        return
+
+    session_ctx = {
+        "day":         session["day"],
+        "intensity":   session["intensity"],
+        "week_number": session["week_number"],
+        "is_deload":   session["is_deload"],
+    }
+    text, keyboard_rows = build_workout_message_and_keyboard(
+        session_ctx, session["exercises"], session["session_id"]
+    )
+
+    msg = await query.message.reply_text(
+        text,
+        parse_mode="HTML",
+        reply_markup=InlineKeyboardMarkup(keyboard_rows),
+        disable_web_page_preview=True,
+    )
+
+    # Update stored message ID to the new message
+    from database import store_workout_message
+    await store_workout_message(user_id, msg.message_id, query.message.chat_id)
+    await query.edit_message_text("Session resumed 👆", parse_mode="HTML")
