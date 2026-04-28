@@ -46,6 +46,8 @@ CREATE TABLE IF NOT EXISTS exercise_history (
 CREATE TABLE IF NOT EXISTS active_sessions (
     user_id     INTEGER PRIMARY KEY,
     session_id  TEXT    NOT NULL,
+    message_id  INTEGER DEFAULT NULL,
+    chat_id     INTEGER DEFAULT NULL,
     state       TEXT    DEFAULT '{}'
 );
 """
@@ -54,17 +56,14 @@ CREATE TABLE IF NOT EXISTS active_sessions (
 async def init_db():
     async with aiosqlite.connect(DB_PATH) as db:
         await db.executescript(SCHEMA)
-        # Migrate existing DBs — add columns if missing
-        for col, definition in [
-            ("setup_done", "INTEGER DEFAULT 0"),
-            ("note",       "TEXT DEFAULT ''"),
+        for table, col, definition in [
+            ("users",           "setup_done", "INTEGER DEFAULT 0"),
+            ("sessions",        "note",       "TEXT DEFAULT ''"),
+            ("active_sessions", "message_id", "INTEGER DEFAULT NULL"),
+            ("active_sessions", "chat_id",    "INTEGER DEFAULT NULL"),
         ]:
             try:
-                await db.execute(f"ALTER TABLE users ADD COLUMN {col} {definition}")
-            except Exception:
-                pass
-            try:
-                await db.execute(f"ALTER TABLE sessions ADD COLUMN {col} {definition}")
+                await db.execute(f"ALTER TABLE {table} ADD COLUMN {col} {definition}")
             except Exception:
                 pass
         await db.commit()
@@ -125,6 +124,28 @@ async def create_session(session_id: str, user_id: int, split: str, day: str,
         await db.commit()
 
 
+async def store_workout_message(user_id: int, message_id: int, chat_id: int) -> None:
+    async with aiosqlite.connect(DB_PATH) as db:
+        await db.execute(
+            "UPDATE active_sessions SET message_id = ?, chat_id = ? WHERE user_id = ?",
+            (message_id, chat_id, user_id)
+        )
+        await db.commit()
+
+
+async def get_workout_message(user_id: int) -> tuple[int, int] | tuple[None, None]:
+    async with aiosqlite.connect(DB_PATH) as db:
+        db.row_factory = aiosqlite.Row
+        async with db.execute(
+            "SELECT message_id, chat_id FROM active_sessions WHERE user_id = ?",
+            (user_id,)
+        ) as cur:
+            row = await cur.fetchone()
+            if not row or not row["message_id"]:
+                return None, None
+            return row["message_id"], row["chat_id"]
+
+
 async def get_active_session(user_id: int) -> dict | None:
     async with aiosqlite.connect(DB_PATH) as db:
         db.row_factory = aiosqlite.Row
@@ -160,8 +181,7 @@ async def complete_session(session_id: str, user_id: int) -> None:
 async def add_session_note(session_id: str, note: str) -> None:
     async with aiosqlite.connect(DB_PATH) as db:
         await db.execute(
-            "UPDATE sessions SET note = ? WHERE session_id = ?",
-            (note, session_id)
+            "UPDATE sessions SET note = ? WHERE session_id = ?", (note, session_id)
         )
         await db.commit()
 

@@ -12,6 +12,7 @@ from handlers.workout import workout_command
 from handlers.logging import (
     handle_log_exercise, handle_reps_logged, handle_edit_set,
     handle_swap, handle_finish, handle_skip, handle_abandon, handle_resume,
+    handle_dismiss_rest,
 )
 from handlers.settings import (
     split_command, intensity_command, progress_command, status_command,
@@ -100,6 +101,7 @@ def main():
     app.add_handler(CallbackQueryHandler(handle_abandon,       pattern="^abandon_session$"))
     app.add_handler(CallbackQueryHandler(handle_resume,        pattern="^resume_session$"))
     app.add_handler(CallbackQueryHandler(handle_setup_callback,pattern=r"^setup:"))
+    app.add_handler(CallbackQueryHandler(handle_dismiss_rest,  pattern="^dismiss_rest$"))
 
     # Plain text (for setup wizard weight input)
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))

@@ -160,20 +160,49 @@ async def handle_setup_weight_input(update: Update, context: ContextTypes.DEFAUL
 
 # ── /exercises ────────────────────────────────────────────────────────────────
 
+CATEGORY_FILTER_MAP = {
+    "push":  ["chest_compound","chest_secondary","shoulder_press","lateral_raise","triceps_compound","triceps_isolation"],
+    "pull":  ["vertical_pull","horizontal_row","rear_delt","biceps_compound","biceps_isolation","face_pull_shrug"],
+    "legs":  ["squat_pattern","hip_hinge","quad_isolation","hamstring_isolation","calves","glute_isolation"],
+    "upper": ["chest_compound","vertical_pull","shoulder_press","horizontal_row","triceps_compound","biceps_compound","lateral_raise","rear_delt"],
+    "lower": ["squat_pattern","hip_hinge","quad_isolation","hamstring_isolation","calves","glute_isolation"],
+    "core":  ["core"],
+}
+
 async def exercises_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """List all exercise IDs grouped by category."""
-    lines = ["<b>Exercise IDs by Category</b>\n"]
-    for slot, cat in CATEGORIES.items():
+    """List exercise IDs. Optional filter: /exercises push, /exercises legs, etc."""
+    filter_arg = context.args[0].lower() if context.args else None
+
+    if filter_arg and filter_arg not in CATEGORY_FILTER_MAP and filter_arg not in CATEGORIES:
+        valid = ", ".join(CATEGORY_FILTER_MAP.keys())
+        await update.message.reply_text(
+            f"❌ Unknown filter <code>{filter_arg}</code>.\n"
+            f"Valid filters: <code>{valid}</code>\n"
+            f"Or just /exercises to see all.",
+            parse_mode="HTML"
+        )
+        return
+
+    if filter_arg in CATEGORY_FILTER_MAP:
+        slots_to_show = {k: CATEGORIES[k] for k in CATEGORY_FILTER_MAP[filter_arg] if k in CATEGORIES}
+        title = f"<b>{filter_arg.title()} Day Exercises</b>\n"
+    elif filter_arg in CATEGORIES:
+        slots_to_show = {filter_arg: CATEGORIES[filter_arg]}
+        title = f"<b>{CATEGORIES[filter_arg]['label']} Exercises</b>\n"
+    else:
+        slots_to_show = CATEGORIES
+        title = "<b>Exercise IDs by Category</b>\n"
+
+    lines = [title]
+    for slot, cat in slots_to_show.items():
         lines.append(f"\n<b>{cat['label']}</b>")
         for ex in cat["exercises"]:
             lines.append(f"  <code>{ex['id']}</code> — {ex['name']}")
 
-    # Telegram has a 4096 char limit — split if needed
     text = "\n".join(lines)
     if len(text) <= 4096:
         await update.message.reply_text(text, parse_mode="HTML")
     else:
-        # Send in two chunks
         mid = len(lines) // 2
         await update.message.reply_text("\n".join(lines[:mid]), parse_mode="HTML")
         await update.message.reply_text("\n".join(lines[mid:]), parse_mode="HTML")

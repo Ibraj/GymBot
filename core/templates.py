@@ -11,7 +11,6 @@ TEMPLATES  = _DATA["templates"]
 
 
 def get_slots(split: str, day: str) -> list[str]:
-    """Return ordered slot list for a given split+day."""
     return TEMPLATES[split][day]
 
 
@@ -20,7 +19,6 @@ def get_category(slot: str) -> dict:
 
 
 def get_exercise(exercise_id: str) -> dict | None:
-    """Find an exercise dict by its ID across all categories."""
     for cat in CATEGORIES.values():
         for ex in cat["exercises"]:
             if ex["id"] == exercise_id:
@@ -36,5 +34,8 @@ def is_lower_body(slot: str) -> bool:
     return CATEGORIES[slot].get("is_lower", False)
 
 
-def video_url(video_id: str) -> str:
-    return f"https://youtube.com/watch?v={video_id}"
+def video_url(video_ref: str) -> str:
+    """Handles both short YouTube IDs and full URLs (search links for new exercises)."""
+    if video_ref.startswith("http"):
+        return video_ref
+    return f"https://youtube.com/watch?v={video_ref}"

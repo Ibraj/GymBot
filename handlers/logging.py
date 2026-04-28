@@ -4,11 +4,15 @@ from telegram.ext import ContextTypes
 from database import (
     get_active_session, update_session_exercises,
     complete_session, upsert_user,
-    update_exercise_history, get_exercise_history
+    update_exercise_history, get_exercise_history,
+    get_workout_message
 )
 from core.rotation import get_alternative
 from core.progression import compute_progression, advance_week
-from core.formatter import format_set_prompt, format_session_summary
+from core.formatter import (
+    format_set_prompt, format_session_summary,
+    build_workout_message_and_keyboard
+)
 from config import VALID_DAYS, INTENSITY
 
 
@@ -34,6 +38,35 @@ async def _cancel_rest_timer(context, user_id: int):
         job.schedule_removal()
 
 
+async def _update_workout_message(context, user_id: int, session: dict, exercises: list):
+    """Edit the original workout message with updated trackers and button states."""
+    message_id, chat_id = await get_workout_message(user_id)
+    if not message_id or not chat_id:
+        return
+
+    session_ctx = {
+        "day":         session["day"],
+        "intensity":   session["intensity"],
+        "week_number": session["week_number"],
+        "is_deload":   session["is_deload"],
+    }
+    text, keyboard_rows = build_workout_message_and_keyboard(
+        session_ctx, exercises, session["session_id"]
+    )
+
+    try:
+        await context.bot.edit_message_text(
+            chat_id=chat_id,
+            message_id=message_id,
+            text=text,
+            parse_mode="HTML",
+            reply_markup=InlineKeyboardMarkup(keyboard_rows),
+            disable_web_page_preview=True,
+        )
+    except Exception:
+        pass  # Message may already be identical — Telegram throws if no change
+
+
 async def _rest_over_callback(context):
     job  = context.job
     data = job.data
@@ -43,7 +76,10 @@ async def _rest_over_callback(context):
             f"⏱ <b>Rest over!</b>\n"
             f"Time for set {data['next_set']} of <b>{data['exercise_name']}</b> 💪"
         ),
-        parse_mode="HTML"
+        parse_mode="HTML",
+        reply_markup=InlineKeyboardMarkup([[
+            InlineKeyboardButton("✅ Got it", callback_data="dismiss_rest")
+        ]])
     )
 
 
@@ -90,7 +126,7 @@ async def handle_reps_logged(update: Update, context: ContextTypes.DEFAULT_TYPE)
     exercises = session["exercises"]
     ex        = exercises[ex_idx]
 
-    # Check if editing an existing set
+    # Handle edit vs new
     existing = next((s for s in ex["sets_logged"] if s["set"] == set_num), None)
     if existing:
         existing["reps"] = reps
@@ -131,32 +167,34 @@ async def handle_reps_logged(update: Update, context: ContextTypes.DEFAULT_TYPE)
         )
 
     else:
-        # All sets done
+        # All sets done — update original workout message
         total_reps = sum(s["reps"] for s in ex["sets_logged"])
         await _cancel_rest_timer(context, user_id)
 
-        # Build edit buttons for each logged set
+        # Edit buttons for each logged set
         edit_buttons = [
             InlineKeyboardButton(
-                f"✏️ Set {s['set']} ({s['reps']} reps)",
+                f"✏️ Set {s['set']} ({s['reps']})",
                 callback_data=f"edit_set:{session_id}:{ex_idx}:{s['set']}"
             )
             for s in ex["sets_logged"]
         ]
-        # Group into rows of 2
         edit_rows = [edit_buttons[i:i+2] for i in range(0, len(edit_buttons), 2)]
 
         await query.edit_message_text(
             f"✅ <b>{ex['name']}</b> done — "
             f"{len(ex['sets_logged'])} sets, {total_reps} total reps.\n\n"
-            f"Go back and log the next exercise.",
+            f"Head back to the workout message to log the next exercise.",
             parse_mode="HTML",
             reply_markup=InlineKeyboardMarkup(edit_rows) if edit_rows else None
         )
 
+        # Live-update the original workout message
+        await _update_workout_message(context, user_id, session, exercises)
+
 
 async def handle_edit_set(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Callback: edit_set:{session_id}:{ex_idx}:{set_num} — re-prompt reps for a logged set."""
+    """Callback: edit_set:{session_id}:{ex_idx}:{set_num}"""
     query = update.callback_query
     await query.answer()
 
@@ -177,6 +215,16 @@ async def handle_edit_set(update: Update, context: ContextTypes.DEFAULT_TYPE):
         parse_mode="HTML",
         reply_markup=_rep_keyboard(session_id, ex_idx, set_num),
     )
+
+
+async def handle_dismiss_rest(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Callback: dismiss_rest — delete the rest-over ping message."""
+    query = update.callback_query
+    await query.answer()
+    try:
+        await query.message.delete()
+    except Exception:
+        await query.edit_message_text("✅")
 
 
 # ── Swap ──────────────────────────────────────────────────────────────────────
@@ -210,8 +258,12 @@ async def handle_swap(update: Update, context: ContextTypes.DEFAULT_TYPE):
     })
 
     await update_session_exercises(session_id, exercises)
+    await query.answer(f"Swapped to {alt['name']}", show_alert=False)
+
+    # Update the original workout message to show new exercise name
+    await _update_workout_message(context, user_id, session, exercises)
     await query.edit_message_text(
-        f"🔄 Swapped to <b>{alt['name']}</b> for this session.",
+        f"🔄 Swapped to <b>{alt['name']}</b>.\n\nHead back to the workout.",
         parse_mode="HTML"
     )
 
