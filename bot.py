@@ -12,7 +12,7 @@ from handlers.workout import workout_command
 from handlers.logging import (
     handle_log_exercise, handle_reps_logged, handle_edit_set,
     handle_swap, handle_finish, handle_skip, handle_abandon, handle_resume,
-    handle_dismiss_rest, handle_back_to_workout,
+    handle_dismiss_rest, handle_back_to_workout, handle_more, more_command,
 )
 from handlers.settings import (
     split_command, intensity_command, progress_command, status_command,
@@ -35,6 +35,7 @@ async def start_command(update: Update, _):
         "<b>Commands:</b>\n"
         "/setup — First-time setup wizard\n"
         "/workout &lt;day&gt; [intensity] — Start a session\n"
+        "/more — Bonus exercises after a session\n"
         "/today — What should I train today?\n"
         "/exercises — Browse all exercise IDs\n"
         "/setweight &lt;exercise_id&gt; &lt;kg&gt; — Set a working weight\n"
@@ -88,6 +89,7 @@ def main():
     app.add_handler(CommandHandler("start",     start_command))
     app.add_handler(CommandHandler("setup",     setup_command))
     app.add_handler(CommandHandler("workout",   workout_command))
+    app.add_handler(CommandHandler("more",      more_command))
     app.add_handler(CommandHandler("today",     today_command))
     app.add_handler(CommandHandler("exercises", exercises_command))
     app.add_handler(CommandHandler("setweight", setweight_command))
@@ -110,6 +112,7 @@ def main():
     app.add_handler(CallbackQueryHandler(handle_setup_callback,pattern=r"^setup:"))
     app.add_handler(CallbackQueryHandler(handle_dismiss_rest,     pattern="^dismiss_rest$"))
     app.add_handler(CallbackQueryHandler(handle_back_to_workout,  pattern=r"^back_to_workout:"))
+    app.add_handler(CallbackQueryHandler(handle_more,             pattern="^more_exercises$"))
 
     # Plain text (for setup wizard weight input)
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))

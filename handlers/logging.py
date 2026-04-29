@@ -372,7 +372,21 @@ async def handle_finish(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await upsert_user(user_id, **advance_week(user, split))
 
     await _cancel_rest_timer(context, user_id)
-    await query.edit_message_text(format_session_summary(exercises), parse_mode="HTML")
+
+    # Store completed session context for /more
+    context.user_data["last_day"]       = session["day"]
+    context.user_data["last_split"]     = session["split"]
+    context.user_data["last_intensity"] = session["intensity"]
+    context.user_data["done_slots"]     = [ex["slot"] for ex in exercises]
+
+    summary = format_session_summary(exercises)
+    await query.edit_message_text(
+        summary,
+        parse_mode="HTML",
+        reply_markup=InlineKeyboardMarkup([[
+            InlineKeyboardButton("🔁 More exercises", callback_data="more_exercises")
+        ]])
+    )
 
 
 async def handle_skip(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -450,3 +464,102 @@ async def handle_resume(update: Update, context: ContextTypes.DEFAULT_TYPE):
     from database import store_workout_message
     await store_workout_message(user_id, msg.message_id, query.message.chat_id)
     await query.edit_message_text("Session resumed 👆")
+
+# ── More exercises ────────────────────────────────────────────────────────────
+
+async def _generate_bonus_round(user_id: int, day: str, split: str,
+                                intensity: str, done_slots: list, context) -> str:
+    """Pick 3 bonus exercises from the day's slots, avoiding already-done ones."""
+    import random
+    from core.templates import get_slots, video_url
+    from core.rotation import pick_exercise
+    from database import get_exercise_history, upsert_user
+    from config import INTENSITY
+    from core.formatter import SLOT_EMOJI
+
+    user  = await upsert_user(user_id)
+    slots = list(get_slots(split, day))
+
+    # Prefer slots not already done, fall back to any if needed
+    fresh  = [s for s in slots if s not in done_slots]
+    pool   = fresh if fresh else slots
+    picks  = random.sample(pool, min(3, len(pool)))
+    cfg    = INTENSITY["easy"]  # bonus round always easy
+
+    lines = ["💥 <b>Bonus Round</b> — easy pace, 2–3 sets\n"]
+    for slot in picks:
+        ex      = pick_exercise(slot, user["last_used"], user["pinned"], "easy")
+        history = await get_exercise_history(user_id, ex["id"])
+        weight  = history["current_weight_kg"]
+        ico     = SLOT_EMOJI.get(slot, "•")
+        lines.append(
+            f'{ico} <a href="{video_url(ex["video_id"])}"><b>{ex["name"]}</b></a>\n'
+            f'    <code>2–3 × 10–15 reps  @  {weight} kg</code>\n'
+        )
+
+    lines.append("\nLog sets manually or just track in your head. Go get it 💪")
+    return "\n".join(lines)
+
+
+async def handle_more(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Callback: more_exercises — generate a bonus round."""
+    query   = update.callback_query
+    await query.answer()
+
+    user_id   = query.from_user.id
+    day       = context.user_data.get("last_day")
+    split     = context.user_data.get("last_split")
+    intensity = context.user_data.get("last_intensity", "moderate")
+    done      = context.user_data.get("done_slots", [])
+
+    if not day or not split:
+        await query.message.reply_text(
+            "No recent session found. Finish a session first.",
+            parse_mode="HTML"
+        )
+        return
+
+    text = await _generate_bonus_round(user_id, day, split, intensity, done, context)
+
+    await query.message.reply_text(
+        text,
+        parse_mode="HTML",
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup([[
+            InlineKeyboardButton("🔁 More", callback_data="more_exercises")
+        ]])
+    )
+
+
+async def more_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """/more — generate a bonus round after a completed session."""
+    user_id   = update.effective_user.id
+    day       = context.user_data.get("last_day")
+    split     = context.user_data.get("last_split")
+    intensity = context.user_data.get("last_intensity", "moderate")
+    done      = context.user_data.get("done_slots", [])
+
+    if not day or not split:
+        # Try last completed session from DB
+        from database import get_recent_sessions
+        sessions = await get_recent_sessions(user_id, limit=1)
+        if not sessions:
+            await update.message.reply_text(
+                "No recent session found. Complete a session first.",
+                parse_mode="HTML"
+            )
+            return
+        day   = sessions[0]["day"]
+        split = sessions[0]["split"]
+        intensity = sessions[0]["intensity"]
+        done  = []
+
+    text = await _generate_bonus_round(user_id, day, split, intensity, done, context)
+    await update.message.reply_text(
+        text,
+        parse_mode="HTML",
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup([[
+            InlineKeyboardButton("🔁 More", callback_data="more_exercises")
+        ]])
+    )
