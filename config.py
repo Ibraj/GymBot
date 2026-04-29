@@ -54,58 +54,57 @@ DELOAD_WEIGHT_FACTOR      = 0.6
 CONSECUTIVE_FAIL_THRESHOLD = 3
 
 # ── Extra slots per intensity per day ────────────────────────────────────────
-# Added on top of the base template slots
 EXTRA_SLOTS = {
     "ppl": {
         "push": {
-            "moderate": ["rear_delt"],
-            "hardcore": ["rear_delt", "chest_compound"],
+            "moderate": ["shoulder_rear"],
+            "hardcore": ["shoulder_rear", "chest_upper"],
         },
         "pull": {
-            "moderate": ["horizontal_row"],
-            "hardcore": ["horizontal_row", "biceps_compound"],
+            "moderate": ["lats_horizontal"],
+            "hardcore": ["lats_horizontal", "biceps_long"],
         },
         "legs": {
-            "moderate": ["quad_isolation"],
-            "hardcore": ["quad_isolation", "hamstring_isolation"],
+            "moderate": ["quads_isolation"],
+            "hardcore": ["quads_isolation", "hamstrings_curl"],
         },
     },
     "pplul": {
         "push": {
-            "moderate": ["rear_delt"],
-            "hardcore": ["rear_delt", "chest_compound"],
+            "moderate": ["shoulder_rear"],
+            "hardcore": ["shoulder_rear", "chest_upper"],
         },
         "pull": {
-            "moderate": ["horizontal_row"],
-            "hardcore": ["horizontal_row", "biceps_compound"],
+            "moderate": ["lats_horizontal"],
+            "hardcore": ["lats_horizontal", "biceps_long"],
         },
         "legs": {
-            "moderate": ["quad_isolation"],
-            "hardcore": ["quad_isolation", "hamstring_isolation"],
+            "moderate": ["quads_isolation"],
+            "hardcore": ["quads_isolation", "hamstrings_curl"],
         },
         "upper": {
-            "moderate": ["rear_delt"],
-            "hardcore": ["rear_delt", "chest_secondary"],
+            "moderate": ["shoulder_rear"],
+            "hardcore": ["shoulder_rear", "chest_upper"],
         },
         "lower": {
-            "moderate": ["quad_isolation"],
-            "hardcore": ["quad_isolation", "hamstring_isolation"],
+            "moderate": ["quads_isolation"],
+            "hardcore": ["quads_isolation", "hamstrings_curl"],
         },
     },
     "upper_lower": {
         "upper": {
-            "moderate": ["rear_delt"],
-            "hardcore": ["rear_delt", "chest_secondary"],
+            "moderate": ["shoulder_rear"],
+            "hardcore": ["shoulder_rear", "chest_upper"],
         },
         "lower": {
-            "moderate": ["quad_isolation"],
-            "hardcore": ["quad_isolation", "hamstring_isolation"],
+            "moderate": ["quads_isolation"],
+            "hardcore": ["quads_isolation", "hamstrings_curl"],
         },
     },
     "full_body": {
         "full": {
-            "moderate": ["quad_isolation"],
-            "hardcore": ["quad_isolation", "hamstring_isolation"],
+            "moderate": ["quads_isolation"],
+            "hardcore": ["quads_isolation", "hamstrings_curl"],
         },
     },
 }

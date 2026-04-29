@@ -2,7 +2,7 @@ import uuid
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ContextTypes
 
-from config import VALID_DAYS, INTENSITY, EXTRA_SLOTS
+from config import VALID_DAYS, INTENSITY, EXTRA_SLOTS, DAY_WARMUP
 from database import (
     upsert_user, create_session,
     get_active_session, update_session_exercises,
@@ -10,31 +10,44 @@ from database import (
     complete_session
 )
 from core.templates import get_slots
-from core.rotation import pick_exercise
+from core.rotation import build_session, get_alternative
 from core.progression import apply_deload
 from core.formatter import build_workout_message_and_keyboard
 
 
 async def start_session(user_id: int, day: str, intensity: str,
-                        reply_message, context: ContextTypes.DEFAULT_TYPE):
-    """
-    Shared session builder. Called by workout_command and handle_abandon.
-    reply_message: the telegram Message object to reply to.
-    """
+                        reply_message, context):
+    """Shared session builder used by workout_command and handle_abandon."""
     user        = await upsert_user(user_id)
     split       = user["split"]
     is_deload   = bool(user["is_deload"])
     week_number = user["week_number"]
     cfg         = INTENSITY["easy"] if is_deload else INTENSITY[intensity]
 
-    # Base slots + intensity-based extras
-    slots = list(get_slots(split, day))
+    # Base slots + intensity extras
+    slots  = list(get_slots(split, day))
     extras = EXTRA_SLOTS.get(split, {}).get(day, {}).get(intensity, [])
-    slots = slots + extras
+    slots  = slots + extras
+
+    # ── Conditional lower back ────────────────────────────────────────────────
+    # Add lower_back slot only when no primary hinge is in the session slots
+    hinge_slots = {"hamstrings_hinge", "quads_compound"}
+    if not any(s in hinge_slots for s in slots):
+        slots.append("lower_back")
+
+    # ── Build exercises via smart selector ────────────────────────────────────
+    selected = build_session(
+        slots=slots,
+        last_used=user["last_used"],
+        pinned=user["pinned"],
+        intensity=intensity if not is_deload else "easy",
+        split=split,
+        day=day,
+    )
 
     exercises_data = []
-    for slot in slots:
-        ex      = pick_exercise(slot, user["last_used"], user["pinned"], intensity)
+    for ex in selected:
+        slot    = ex["slot"]
         history = await get_exercise_history(user_id, ex["id"])
         weight  = history["current_weight_kg"]
 
@@ -67,21 +80,33 @@ async def start_session(user_id: int, day: str, intensity: str,
         new_last_used[ex["slot"]] = ex["exercise_id"]
     await upsert_user(user_id, last_used=new_last_used, intensity=intensity)
 
+    # ── Build message ─────────────────────────────────────────────────────────
     session_ctx = {
         "day": day, "intensity": intensity,
         "week_number": week_number, "is_deload": is_deload,
     }
+
+    # Warmup note
+    warmup_items = DAY_WARMUP.get(day, [])
+    warmup_text  = ""
+    if warmup_items:
+        warmup_text = (
+            "\n🔥 <b>Warm-up first:</b>\n"
+            + "\n".join(f"  · {w}" for w in warmup_items)
+            + "\n"
+        )
+
     text, keyboard_rows = build_workout_message_and_keyboard(
         session_ctx, exercises_data, session_id
     )
+    full_text = warmup_text + "\n" + text if warmup_text else text
 
     msg = await reply_message.reply_text(
-        text,
+        full_text,
         parse_mode="HTML",
         reply_markup=InlineKeyboardMarkup(keyboard_rows),
         disable_web_page_preview=True,
     )
-
     await store_workout_message(user_id, msg.message_id, reply_message.chat_id)
 
 
@@ -97,7 +122,7 @@ async def workout_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         valid = ", ".join(VALID_DAYS[split])
         await update.message.reply_text(
             f"❌ Invalid day for your split (<b>{split}</b>).\n"
-            f"Valid options: <code>{valid}</code>\n\n"
+            f"Valid: <code>{valid}</code>\n\n"
             f"Usage: <code>/workout &lt;day&gt; [intensity]</code>",
             parse_mode="HTML"
         )
@@ -112,9 +137,8 @@ async def workout_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     existing = await get_active_session(user_id)
     if existing:
-        # Store pending params so abandon can auto-start
-        context.user_data["pending_day"]       = day
-        context.user_data["pending_intensity"]  = intensity
+        context.user_data["pending_day"]      = day
+        context.user_data["pending_intensity"] = intensity
         keyboard = InlineKeyboardMarkup([[
             InlineKeyboardButton("Abandon & start new", callback_data="abandon_session"),
             InlineKeyboardButton("Resume current",      callback_data="resume_session"),

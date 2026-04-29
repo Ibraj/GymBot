@@ -161,14 +161,23 @@ async def handle_setup_weight_input(update: Update, context: ContextTypes.DEFAUL
 # ── /exercises ────────────────────────────────────────────────────────────────
 
 CATEGORY_FILTER_MAP = {
-    "push":     ["chest_compound","chest_secondary","shoulder_press","lateral_raise","triceps_compound","triceps_isolation"],
-    "pull":     ["vertical_pull","horizontal_row","rear_delt","biceps_compound","biceps_isolation","face_pull_shrug","traps","forearms"],
-    "legs":     ["squat_pattern","hip_hinge","quad_isolation","hamstring_isolation","calves","glute_isolation"],
-    "upper":    ["chest_compound","vertical_pull","shoulder_press","horizontal_row","triceps_compound","biceps_compound","lateral_raise","rear_delt","traps","forearms"],
-    "lower":    ["squat_pattern","hip_hinge","quad_isolation","hamstring_isolation","calves","glute_isolation"],
-    "core":     ["core"],
-    "forearms": ["forearms"],
-    "traps":    ["traps"],
+    "push":          ["chest_upper","chest_mid","chest_lower","shoulder_front","shoulder_side","shoulder_rear","triceps_long","triceps_lateral"],
+    "pull":          ["lats_vertical","lats_horizontal","upper_back","traps_upper","biceps_long","biceps_short","brachialis","forearms"],
+    "legs":          ["quads_compound","quads_isolation","quads_vmo","hamstrings_curl","hamstrings_hinge","glutes_max","glutes_med","calves_gastro","calves_soleus","adductors","hip_flexors"],
+    "upper":         ["chest_upper","chest_mid","chest_lower","lats_vertical","lats_horizontal","shoulder_front","shoulder_side","shoulder_rear","triceps_long","triceps_lateral","biceps_long","biceps_short","brachialis","traps_upper","forearms"],
+    "lower":         ["quads_compound","quads_isolation","quads_vmo","hamstrings_curl","hamstrings_hinge","glutes_max","glutes_med","calves_gastro","calves_soleus","adductors","hip_flexors"],
+    "chest":         ["chest_upper","chest_mid","chest_lower"],
+    "shoulders":     ["shoulder_front","shoulder_side","shoulder_rear"],
+    "triceps":       ["triceps_long","triceps_lateral"],
+    "back":          ["lats_vertical","lats_horizontal","upper_back","traps_upper"],
+    "biceps":        ["biceps_long","biceps_short","brachialis"],
+    "quads":         ["quads_compound","quads_isolation","quads_vmo"],
+    "hamstrings":    ["hamstrings_curl","hamstrings_hinge"],
+    "glutes":        ["glutes_max","glutes_med"],
+    "calves":        ["calves_gastro","calves_soleus"],
+    "core":          ["core"],
+    "forearms":      ["forearms"],
+    "traps":         ["traps_upper"],
 }
 
 async def exercises_command(update: Update, context: ContextTypes.DEFAULT_TYPE):

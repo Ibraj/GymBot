@@ -1,13 +1,141 @@
 {
   "categories": {
-    "chest_compound": {
-      "label": "Chest Compound",
+    "chest_upper": {
+      "label": "Upper Chest",
+      "muscle_group": "upper",
+      "is_lower": false,
+      "exercises": [
+        {
+          "id": "incline_bar",
+          "name": "Incline Barbell Press",
+          "priority": "primary",
+          "movement_type": "horizontal_push",
+          "angle": "incline",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=incline+barbell+press+upper+chest+form+jeff+nippard"
+        },
+        {
+          "id": "incline_db",
+          "name": "Incline DB Press",
+          "priority": "primary",
+          "movement_type": "horizontal_push",
+          "angle": "incline",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "8iPEnn-ltC8"
+        },
+        {
+          "id": "smith_incline",
+          "name": "Smith Machine Incline",
+          "priority": "primary",
+          "movement_type": "horizontal_push",
+          "angle": "incline",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=smith+machine+incline+press+upper+chest+form"
+        },
+        {
+          "id": "incline_machine",
+          "name": "Incline Chest Press Machine",
+          "priority": "secondary",
+          "movement_type": "horizontal_push",
+          "angle": "incline",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=incline+chest+press+machine+upper+chest+form"
+        },
+        {
+          "id": "low_cable_fly",
+          "name": "Low-to-High Cable Fly",
+          "priority": "secondary",
+          "movement_type": "horizontal_push",
+          "angle": "incline",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=low+to+high+cable+fly+upper+chest+form+jeff+nippard"
+        },
+        {
+          "id": "incline_db_fly",
+          "name": "Incline DB Fly",
+          "priority": "isolation",
+          "movement_type": "horizontal_push",
+          "angle": "incline",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=incline+dumbbell+fly+upper+chest+form"
+        },
+        {
+          "id": "landmine_press",
+          "name": "Landmine Press",
+          "priority": "secondary",
+          "movement_type": "horizontal_push",
+          "angle": "incline",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=landmine+press+upper+chest+form"
+        },
+        {
+          "id": "incline_cgbp",
+          "name": "Close-Grip Incline Press",
+          "priority": "secondary",
+          "movement_type": "horizontal_push",
+          "angle": "incline",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=close+grip+incline+bench+press+upper+chest+form"
+        },
+        {
+          "id": "cable_incline_press",
+          "name": "Cable Incline Press",
+          "priority": "secondary",
+          "movement_type": "horizontal_push",
+          "angle": "incline",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+incline+chest+press+upper+chest+form"
+        },
+        {
+          "id": "incline_pushup",
+          "name": "Incline Push-ups",
+          "priority": "secondary",
+          "movement_type": "horizontal_push",
+          "angle": "incline",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=incline+push+ups+upper+chest+form"
+        }
+      ]
+    },
+    "chest_mid": {
+      "label": "Mid Chest",
       "muscle_group": "upper",
       "is_lower": false,
       "exercises": [
         {
           "id": "bench_bar",
           "name": "Barbell Bench Press",
+          "priority": "primary",
+          "movement_type": "horizontal_push",
+          "angle": "flat",
           "difficulty": [
             "moderate",
             "hardcore"
@@ -17,6 +145,9 @@
         {
           "id": "bench_db",
           "name": "Dumbbell Bench Press",
+          "priority": "primary",
+          "movement_type": "horizontal_push",
+          "angle": "flat",
           "difficulty": [
             "easy",
             "moderate"
@@ -26,108 +157,20 @@
         {
           "id": "chest_machine",
           "name": "Machine Chest Press",
+          "priority": "primary",
+          "movement_type": "horizontal_push",
+          "angle": "flat",
           "difficulty": [
             "easy"
           ],
           "video_id": "Dg7ricMvQcM"
         },
         {
-          "id": "pushup",
-          "name": "Push-ups",
-          "difficulty": [
-            "easy"
-          ],
-          "video_id": "IODxDxX7oi4"
-        },
-        {
-          "id": "dips_chest",
-          "name": "Weighted Dips (Chest)",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=weighted+chest+dips+proper+form"
-        },
-        {
-          "id": "cable_cross",
-          "name": "Cable Crossover",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "Iwe6AmxahH8"
-        },
-        {
-          "id": "floor_press",
-          "name": "Barbell Floor Press",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=barbell+floor+press+proper+form"
-        },
-        {
-          "id": "spoto_press",
-          "name": "Spoto Press",
-          "difficulty": [
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=spoto+press+bench+press+variation+form"
-        },
-        {
-          "id": "pin_press",
-          "name": "Pin Press",
-          "difficulty": [
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=pin+press+bench+press+proper+form"
-        },
-        {
-          "id": "db_floor_press",
-          "name": "DB Floor Press",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=dumbbell+floor+press+proper+form"
-        },
-        {
-          "id": "smith_bench",
-          "name": "Smith Machine Bench",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=smith+machine+bench+press+proper+form"
-        },
-        {
-          "id": "low_cable_fly",
-          "name": "Low-to-High Cable Fly",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=low+to+high+cable+fly+chest+form"
-        }
-      ]
-    },
-    "chest_secondary": {
-      "label": "Chest Secondary",
-      "muscle_group": "upper",
-      "is_lower": false,
-      "exercises": [
-        {
-          "id": "incline_db",
-          "name": "Incline DB Press",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "8iPEnn-ltC8"
-        },
-        {
-          "id": "cable_fly",
-          "name": "Cable Fly",
+          "id": "cable_fly_mid",
+          "name": "Cable Fly (Mid)",
+          "priority": "isolation",
+          "movement_type": "horizontal_push",
+          "angle": "flat",
           "difficulty": [
             "easy",
             "moderate"
@@ -137,82 +180,222 @@
         {
           "id": "pec_deck",
           "name": "Pec Deck",
-          "difficulty": [
-            "easy"
-          ],
-          "video_id": "Z57CtFmRMxA"
-        },
-        {
-          "id": "incline_bar",
-          "name": "Incline Barbell Press",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=incline+barbell+press+proper+form+jeff+nippard"
-        },
-        {
-          "id": "decline_db",
-          "name": "Decline DB Press",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=decline+dumbbell+press+proper+form"
-        },
-        {
-          "id": "svend_press",
-          "name": "Svend Press",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=svend+press+chest+exercise+form"
-        },
-        {
-          "id": "incline_cable",
-          "name": "Incline Cable Fly",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=incline+cable+fly+chest+upper+form"
-        },
-        {
-          "id": "decline_bar",
-          "name": "Decline Barbell Press",
-          "difficulty": [
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=decline+barbell+press+proper+form"
-        },
-        {
-          "id": "smith_incline",
-          "name": "Smith Machine Incline",
+          "priority": "isolation",
+          "movement_type": "horizontal_push",
+          "angle": "flat",
           "difficulty": [
             "easy",
             "moderate"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=smith+machine+incline+press+proper+form"
+          "video_id": "Z57CtFmRMxA"
         },
         {
-          "id": "db_pullover",
-          "name": "DB Pullover",
+          "id": "floor_press",
+          "name": "Barbell Floor Press",
+          "priority": "secondary",
+          "movement_type": "horizontal_push",
+          "angle": "flat",
           "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=barbell+floor+press+chest+form"
+        },
+        {
+          "id": "db_floor_press",
+          "name": "DB Floor Press",
+          "priority": "secondary",
+          "movement_type": "horizontal_push",
+          "angle": "flat",
+          "difficulty": [
+            "easy",
             "moderate"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=dumbbell+pullover+chest+form"
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+floor+press+chest+form"
+        },
+        {
+          "id": "spoto_press",
+          "name": "Spoto Press",
+          "priority": "secondary",
+          "movement_type": "horizontal_push",
+          "angle": "flat",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=spoto+press+bench+variation+form"
+        },
+        {
+          "id": "pin_press",
+          "name": "Pin Press",
+          "priority": "secondary",
+          "movement_type": "horizontal_push",
+          "angle": "flat",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=pin+press+bench+chest+form"
+        },
+        {
+          "id": "svend_press",
+          "name": "Svend Press",
+          "priority": "isolation",
+          "movement_type": "horizontal_push",
+          "angle": "flat",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=svend+press+mid+chest+form"
+        },
+        {
+          "id": "pushup",
+          "name": "Push-ups",
+          "priority": "secondary",
+          "movement_type": "horizontal_push",
+          "angle": "flat",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "IODxDxX7oi4"
+        },
+        {
+          "id": "guillotine_press",
+          "name": "Guillotine Press",
+          "priority": "secondary",
+          "movement_type": "horizontal_push",
+          "angle": "flat",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=guillotine+press+upper+chest+neck+press+form"
+        },
+        {
+          "id": "hex_press",
+          "name": "Hex Press (DB Squeeze)",
+          "priority": "secondary",
+          "movement_type": "horizontal_push",
+          "angle": "flat",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=hex+press+dumbbell+squeeze+press+chest+form"
         }
       ]
     },
-    "shoulder_press": {
-      "label": "Shoulder Press",
+    "chest_lower": {
+      "label": "Lower Chest",
+      "muscle_group": "upper",
+      "is_lower": false,
+      "exercises": [
+        {
+          "id": "dips_chest",
+          "name": "Weighted Dips (Chest)",
+          "priority": "primary",
+          "movement_type": "horizontal_push",
+          "angle": "decline",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=chest+dips+lower+chest+form+jeff+nippard"
+        },
+        {
+          "id": "decline_db",
+          "name": "Decline DB Press",
+          "priority": "primary",
+          "movement_type": "horizontal_push",
+          "angle": "decline",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=decline+dumbbell+press+lower+chest+form"
+        },
+        {
+          "id": "decline_bar",
+          "name": "Decline Barbell Press",
+          "priority": "primary",
+          "movement_type": "horizontal_push",
+          "angle": "decline",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=decline+barbell+press+lower+chest+form"
+        },
+        {
+          "id": "high_cable_fly",
+          "name": "High-to-Low Cable Fly",
+          "priority": "secondary",
+          "movement_type": "horizontal_push",
+          "angle": "decline",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=high+to+low+cable+fly+lower+chest+form"
+        },
+        {
+          "id": "decline_machine",
+          "name": "Decline Chest Machine",
+          "priority": "secondary",
+          "movement_type": "horizontal_push",
+          "angle": "decline",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=decline+chest+press+machine+lower+chest+form"
+        },
+        {
+          "id": "cable_cross_low",
+          "name": "Cable Crossover (Low)",
+          "priority": "isolation",
+          "movement_type": "horizontal_push",
+          "angle": "decline",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+crossover+lower+chest+form"
+        },
+        {
+          "id": "bench_dips",
+          "name": "Weighted Bench Dips",
+          "priority": "secondary",
+          "movement_type": "horizontal_push",
+          "angle": "decline",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=weighted+bench+dips+lower+chest+form"
+        },
+        {
+          "id": "dip_machine",
+          "name": "Assisted Dip Machine",
+          "priority": "secondary",
+          "movement_type": "horizontal_push",
+          "angle": "decline",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=assisted+dip+machine+lower+chest+form"
+        }
+      ]
+    },
+    "shoulder_front": {
+      "label": "Front Delt (Press)",
       "muscle_group": "upper",
       "is_lower": false,
       "exercises": [
         {
           "id": "ohp_bar",
           "name": "Overhead Barbell Press",
+          "priority": "primary",
+          "movement_type": "vertical_push",
+          "angle": "overhead",
           "difficulty": [
             "moderate",
             "hardcore"
@@ -222,6 +405,9 @@
         {
           "id": "ohp_db",
           "name": "Dumbbell Shoulder Press",
+          "priority": "primary",
+          "movement_type": "vertical_push",
+          "angle": "overhead",
           "difficulty": [
             "easy",
             "moderate"
@@ -231,6 +417,9 @@
         {
           "id": "arnold",
           "name": "Arnold Press",
+          "priority": "secondary",
+          "movement_type": "vertical_push",
+          "angle": "overhead",
           "difficulty": [
             "moderate",
             "hardcore"
@@ -240,6 +429,9 @@
         {
           "id": "seated_ohp",
           "name": "Seated Barbell Press",
+          "priority": "primary",
+          "movement_type": "vertical_push",
+          "angle": "overhead",
           "difficulty": [
             "moderate",
             "hardcore"
@@ -247,33 +439,22 @@
           "video_id": "https://www.youtube.com/results?search_query=seated+overhead+barbell+press+form"
         },
         {
-          "id": "landmine_press",
-          "name": "Landmine Press",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=landmine+press+shoulder+proper+form"
-        },
-        {
-          "id": "push_press",
-          "name": "Push Press",
-          "difficulty": [
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=push+press+proper+form"
-        },
-        {
           "id": "machine_press",
           "name": "Machine Shoulder Press",
+          "priority": "primary",
+          "movement_type": "vertical_push",
+          "angle": "overhead",
           "difficulty": [
             "easy"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=machine+shoulder+press+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=machine+shoulder+press+form"
         },
         {
           "id": "smith_ohp",
           "name": "Smith Machine OHP",
+          "priority": "secondary",
+          "movement_type": "vertical_push",
+          "angle": "overhead",
           "difficulty": [
             "easy",
             "moderate"
@@ -281,32 +462,64 @@
           "video_id": "https://www.youtube.com/results?search_query=smith+machine+overhead+press+form"
         },
         {
-          "id": "z_press",
-          "name": "Z-Press",
+          "id": "push_press",
+          "name": "Push Press",
+          "priority": "primary",
+          "movement_type": "vertical_push",
+          "angle": "overhead",
           "difficulty": [
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=z+press+overhead+press+variation+form"
+          "video_id": "https://www.youtube.com/results?search_query=push+press+form+alan+thrall"
         },
         {
-          "id": "cable_ohp",
-          "name": "Cable Shoulder Press",
+          "id": "z_press",
+          "name": "Z-Press",
+          "priority": "secondary",
+          "movement_type": "vertical_push",
+          "angle": "overhead",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=z+press+overhead+shoulder+form"
+        },
+        {
+          "id": "db_front_raise",
+          "name": "DB Front Raise",
+          "priority": "isolation",
+          "movement_type": "front_raise",
+          "angle": "neutral",
           "difficulty": [
             "easy",
             "moderate"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=cable+shoulder+press+form"
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+front+raise+front+delt+form"
+        },
+        {
+          "id": "cable_front_raise",
+          "name": "Cable Front Raise",
+          "priority": "isolation",
+          "movement_type": "front_raise",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+front+raise+front+delt+form"
         }
       ]
     },
-    "lateral_raise": {
-      "label": "Lateral Raise",
+    "shoulder_side": {
+      "label": "Side Delt (Lateral)",
       "muscle_group": "upper",
       "is_lower": false,
       "exercises": [
         {
           "id": "lateral_db",
           "name": "DB Lateral Raise",
+          "priority": "primary",
+          "movement_type": "lateral_raise",
+          "angle": "neutral",
           "difficulty": [
             "easy",
             "moderate"
@@ -316,6 +529,9 @@
         {
           "id": "lateral_cable",
           "name": "Cable Lateral Raise",
+          "priority": "primary",
+          "movement_type": "lateral_raise",
+          "angle": "neutral",
           "difficulty": [
             "easy",
             "moderate"
@@ -323,420 +539,101 @@
           "video_id": "kDqklk1KRAM"
         },
         {
-          "id": "upright_row",
-          "name": "Upright Row",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=upright+row+proper+form+jeff+nippard"
-        },
-        {
           "id": "lateral_machine",
           "name": "Machine Lateral Raise",
+          "priority": "primary",
+          "movement_type": "lateral_raise",
+          "angle": "neutral",
           "difficulty": [
             "easy"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=machine+lateral+raise+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=machine+lateral+raise+side+delt+form"
         },
         {
           "id": "lateral_lean",
           "name": "Leaning Cable Lateral",
+          "priority": "secondary",
+          "movement_type": "lateral_raise",
+          "angle": "neutral",
           "difficulty": [
             "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=leaning+cable+lateral+raise+form"
+          "video_id": "https://www.youtube.com/results?search_query=leaning+cable+lateral+raise+side+delt+form+jeff+nippard"
         },
         {
-          "id": "plate_raise",
-          "name": "Plate Front Raise",
+          "id": "upright_row",
+          "name": "Upright Row",
+          "priority": "secondary",
+          "movement_type": "lateral_raise",
+          "angle": "neutral",
           "difficulty": [
-            "easy",
-            "moderate"
+            "moderate",
+            "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=plate+front+raise+shoulders+form"
-        },
-        {
-          "id": "cable_front",
-          "name": "Cable Front Raise",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=cable+front+raise+shoulders+form"
-        },
-        {
-          "id": "db_front_raise",
-          "name": "DB Front Raise",
-          "difficulty": [
-            "easy"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=dumbbell+front+raise+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=upright+row+side+delt+form"
         },
         {
           "id": "lu_raise",
           "name": "Lu Raise",
+          "priority": "secondary",
+          "movement_type": "lateral_raise",
+          "angle": "neutral",
           "difficulty": [
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=lu+raise+shoulder+exercise+form"
+          "video_id": "https://www.youtube.com/results?search_query=lu+raise+side+delt+shoulder+form"
+        },
+        {
+          "id": "cable_y_raise",
+          "name": "Cable Y-Raise",
+          "priority": "secondary",
+          "movement_type": "lateral_raise",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+y+raise+side+delt+shoulder+form"
+        },
+        {
+          "id": "db_cheat_lateral",
+          "name": "DB Cheat Lateral (Heavy)",
+          "priority": "secondary",
+          "movement_type": "lateral_raise",
+          "angle": "neutral",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=heavy+dumbbell+lateral+raise+cheat+form+side+delt"
+        },
+        {
+          "id": "scaption_raise",
+          "name": "Scaption Raise",
+          "priority": "secondary",
+          "movement_type": "lateral_raise",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=scaption+raise+shoulder+health+scapular+plane+form"
+        },
+        {
+          "id": "cuban_press",
+          "name": "Cuban Press",
+          "priority": "secondary",
+          "movement_type": "lateral_raise",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cuban+press+shoulder+external+rotation+form"
         }
       ]
     },
-    "triceps_compound": {
-      "label": "Triceps Compound",
-      "muscle_group": "upper",
-      "is_lower": false,
-      "exercises": [
-        {
-          "id": "cgbp",
-          "name": "Close-Grip Bench Press",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "nEF0bv2Fi-Y"
-        },
-        {
-          "id": "pushdown_bar",
-          "name": "Triceps Pushdown (Bar)",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "vB5OHsJ3EME"
-        },
-        {
-          "id": "dips_tri",
-          "name": "Triceps Dips",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=triceps+dips+proper+form+jeff+nippard"
-        },
-        {
-          "id": "pushdown_rope",
-          "name": "Rope Pushdown",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=rope+tricep+pushdown+proper+form"
-        },
-        {
-          "id": "tate_press",
-          "name": "Tate Press",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=tate+press+triceps+proper+form"
-        },
-        {
-          "id": "jm_press",
-          "name": "JM Press",
-          "difficulty": [
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=jm+press+triceps+proper+form"
-        },
-        {
-          "id": "machine_tri",
-          "name": "Machine Triceps Press",
-          "difficulty": [
-            "easy"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=machine+triceps+press+proper+form"
-        },
-        {
-          "id": "cable_tri_bar",
-          "name": "Cable Pushdown (V-Bar)",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=v+bar+tricep+pushdown+proper+form"
-        }
-      ]
-    },
-    "triceps_isolation": {
-      "label": "Triceps Isolation",
-      "muscle_group": "upper",
-      "is_lower": false,
-      "exercises": [
-        {
-          "id": "tri_overhead",
-          "name": "Overhead Triceps Ext",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "YbX7Wd8jQ-Q"
-        },
-        {
-          "id": "skulls",
-          "name": "Skull Crushers",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "d_KZxkY_0cM"
-        },
-        {
-          "id": "tri_kickback",
-          "name": "DB Triceps Kickback",
-          "difficulty": [
-            "easy"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=dumbbell+triceps+kickback+proper+form"
-        },
-        {
-          "id": "cable_overhead",
-          "name": "Cable Overhead Ext",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=cable+overhead+triceps+extension+form"
-        },
-        {
-          "id": "single_ext",
-          "name": "Single-arm DB Ext",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=single+arm+dumbbell+tricep+extension+form"
-        },
-        {
-          "id": "db_skulls",
-          "name": "DB Skull Crushers",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=dumbbell+skull+crushers+proper+form"
-        },
-        {
-          "id": "ez_skulls",
-          "name": "EZ-Bar Skull Crushers",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=ez+bar+skull+crushers+proper+form"
-        },
-        {
-          "id": "cable_kickback",
-          "name": "Cable Kickback",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=cable+tricep+kickback+proper+form"
-        }
-      ]
-    },
-    "vertical_pull": {
-      "label": "Vertical Pull",
-      "muscle_group": "upper",
-      "is_lower": false,
-      "exercises": [
-        {
-          "id": "pullup",
-          "name": "Pull-ups",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "eGo4IYlbE5g"
-        },
-        {
-          "id": "pulldown",
-          "name": "Lat Pulldown",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "CAwf7n6Luuc"
-        },
-        {
-          "id": "chinup",
-          "name": "Chin-ups",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=chin+ups+proper+form+jeff+nippard"
-        },
-        {
-          "id": "neutral_pullup",
-          "name": "Neutral-Grip Pull-up",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=neutral+grip+pullup+proper+form"
-        },
-        {
-          "id": "single_pulldown",
-          "name": "Single-arm Pulldown",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=single+arm+lat+pulldown+proper+form"
-        },
-        {
-          "id": "straight_pulldown",
-          "name": "Straight-arm Pulldown",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=straight+arm+pulldown+lats+form"
-        },
-        {
-          "id": "machine_pulldown",
-          "name": "Machine Pulldown",
-          "difficulty": [
-            "easy"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=machine+lat+pulldown+proper+form"
-        },
-        {
-          "id": "wide_pulldown",
-          "name": "Wide-Grip Pulldown",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=wide+grip+lat+pulldown+proper+form"
-        },
-        {
-          "id": "rev_pulldown",
-          "name": "Reverse-Grip Pulldown",
-          "difficulty": [
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=reverse+grip+lat+pulldown+proper+form"
-        },
-        {
-          "id": "weighted_pullup",
-          "name": "Weighted Pull-up",
-          "difficulty": [
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=weighted+pullup+proper+form"
-        }
-      ]
-    },
-    "horizontal_row": {
-      "label": "Horizontal Row",
-      "muscle_group": "upper",
-      "is_lower": false,
-      "exercises": [
-        {
-          "id": "row_bar",
-          "name": "Barbell Row",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "G8l_8chR5BE"
-        },
-        {
-          "id": "row_db",
-          "name": "DB Row",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "roCP2zvD5Js"
-        },
-        {
-          "id": "row_cable",
-          "name": "Cable Row",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "UCXmny8EttA"
-        },
-        {
-          "id": "chest_row",
-          "name": "Chest-Supported Row",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=chest+supported+row+proper+form+jeff+nippard"
-        },
-        {
-          "id": "pendlay_row",
-          "name": "Pendlay Row",
-          "difficulty": [
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=pendlay+row+proper+form+alan+thrall"
-        },
-        {
-          "id": "meadows_row",
-          "name": "Meadows Row",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=meadows+row+proper+form"
-        },
-        {
-          "id": "seal_row",
-          "name": "Seal Row",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=seal+row+proper+form+back+exercise"
-        },
-        {
-          "id": "machine_row",
-          "name": "Machine Row",
-          "difficulty": [
-            "easy"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=machine+row+proper+form+back"
-        },
-        {
-          "id": "t_bar_row",
-          "name": "T-Bar Row",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=t+bar+row+proper+form"
-        },
-        {
-          "id": "iso_row",
-          "name": "Iso-Lateral Row",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=iso+lateral+row+machine+proper+form"
-        },
-        {
-          "id": "incline_row",
-          "name": "Incline DB Row",
-          "difficulty": [
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=incline+dumbbell+row+proper+form"
-        }
-      ]
-    },
-    "rear_delt": {
+    "shoulder_rear": {
       "label": "Rear Delt",
       "muscle_group": "upper",
       "is_lower": false,
@@ -744,6 +641,9 @@
         {
           "id": "face_pull",
           "name": "Face Pull",
+          "priority": "primary",
+          "movement_type": "rear_delt_fly",
+          "angle": "neutral",
           "difficulty": [
             "easy",
             "moderate",
@@ -754,6 +654,9 @@
         {
           "id": "rev_fly",
           "name": "Reverse Fly",
+          "priority": "primary",
+          "movement_type": "rear_delt_fly",
+          "angle": "neutral",
           "difficulty": [
             "easy",
             "moderate"
@@ -761,34 +664,47 @@
           "video_id": "imRBoJqozKI"
         },
         {
-          "id": "band_pull_apart",
-          "name": "Band Pull-Apart",
-          "difficulty": [
-            "easy"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=band+pull+apart+rear+delt+form"
-        },
-        {
           "id": "cable_rear_fly",
           "name": "Cable Rear Delt Fly",
+          "priority": "primary",
+          "movement_type": "rear_delt_fly",
+          "angle": "neutral",
           "difficulty": [
             "easy",
             "moderate"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=cable+rear+delt+fly+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=cable+rear+delt+fly+form+jeff+nippard"
+        },
+        {
+          "id": "machine_fly",
+          "name": "Machine Rear Delt Fly",
+          "priority": "primary",
+          "movement_type": "rear_delt_fly",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=pec+deck+reverse+rear+delt+fly+form"
         },
         {
           "id": "w_raise",
           "name": "W-Raise",
+          "priority": "secondary",
+          "movement_type": "rear_delt_fly",
+          "angle": "neutral",
           "difficulty": [
             "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=w+raise+rear+delt+exercise+form"
+          "video_id": "https://www.youtube.com/results?search_query=w+raise+rear+delt+form"
         },
         {
           "id": "ytwl",
           "name": "YTWL Raises",
+          "priority": "secondary",
+          "movement_type": "rear_delt_fly",
+          "angle": "prone",
           "difficulty": [
             "moderate",
             "hardcore"
@@ -796,259 +712,543 @@
           "video_id": "https://www.youtube.com/results?search_query=YTWL+raises+rear+delt+rotator+cuff+form"
         },
         {
-          "id": "machine_fly",
-          "name": "Machine Rear Delt Fly",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=machine+rear+delt+fly+pec+deck+reverse+form"
-        },
-        {
           "id": "prone_y_raise",
           "name": "Prone Y Raise",
+          "priority": "secondary",
+          "movement_type": "rear_delt_fly",
+          "angle": "prone",
           "difficulty": [
             "easy",
             "moderate"
           ],
           "video_id": "https://www.youtube.com/results?search_query=prone+y+raise+rear+delt+form"
-        }
-      ]
-    },
-    "biceps_compound": {
-      "label": "Biceps Compound",
-      "muscle_group": "upper",
-      "is_lower": false,
-      "exercises": [
+        },
         {
-          "id": "curl_bar",
-          "name": "Barbell Curl",
+          "id": "chest_sup_fly",
+          "name": "Chest-Supported Rear Fly",
+          "priority": "secondary",
+          "movement_type": "rear_delt_fly",
+          "angle": "prone",
           "difficulty": [
             "moderate",
             "hardcore"
           ],
-          "video_id": "kwG2ipFRgfo"
+          "video_id": "https://www.youtube.com/results?search_query=chest+supported+rear+delt+fly+form"
         },
         {
-          "id": "curl_hammer",
-          "name": "Hammer Curl",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "zC3nMkuokxs"
-        },
-        {
-          "id": "cable_curl",
-          "name": "Cable Curl",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=cable+bicep+curl+proper+form+jeff+nippard"
-        },
-        {
-          "id": "ez_curl",
-          "name": "EZ-Bar Curl",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=ez+bar+curl+proper+form"
-        },
-        {
-          "id": "drag_curl",
-          "name": "Drag Curl",
+          "id": "cable_pull_face",
+          "name": "Cable Pull to Face",
+          "priority": "secondary",
+          "movement_type": "rear_delt_fly",
+          "angle": "neutral",
           "difficulty": [
             "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=drag+curl+biceps+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=cable+pull+to+face+rear+delt+form"
         },
         {
-          "id": "db_curl",
-          "name": "Dumbbell Curl",
+          "id": "band_pull_apart",
+          "name": "Band Pull-Apart",
+          "priority": "isolation",
+          "movement_type": "rear_delt_fly",
+          "angle": "neutral",
           "difficulty": [
             "easy"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=dumbbell+bicep+curl+proper+form"
-        },
+          "video_id": "https://www.youtube.com/results?search_query=band+pull+apart+rear+delt+form"
+        }
+      ]
+    },
+    "triceps_long": {
+      "label": "Triceps Long Head (Overhead)",
+      "muscle_group": "upper",
+      "is_lower": false,
+      "exercises": [
         {
-          "id": "cross_body",
-          "name": "Cross-Body Hammer Curl",
+          "id": "tri_overhead_db",
+          "name": "Overhead DB Extension",
+          "priority": "primary",
+          "movement_type": "overhead_extension",
+          "angle": "overhead",
           "difficulty": [
+            "easy",
             "moderate"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=cross+body+hammer+curl+proper+form"
+          "video_id": "YbX7Wd8jQ-Q"
         },
         {
-          "id": "machine_curl",
-          "name": "Machine Bicep Curl",
+          "id": "cable_overhead",
+          "name": "Cable Overhead Ext",
+          "priority": "primary",
+          "movement_type": "overhead_extension",
+          "angle": "overhead",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+overhead+triceps+extension+long+head+form+jeff+nippard"
+        },
+        {
+          "id": "skulls",
+          "name": "Skull Crushers (EZ Bar)",
+          "priority": "primary",
+          "movement_type": "overhead_extension",
+          "angle": "flat",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "d_KZxkY_0cM"
+        },
+        {
+          "id": "db_skulls",
+          "name": "DB Skull Crushers",
+          "priority": "primary",
+          "movement_type": "overhead_extension",
+          "angle": "flat",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+skull+crushers+long+head+triceps+form"
+        },
+        {
+          "id": "incline_tri_ext",
+          "name": "Incline DB Triceps Ext",
+          "priority": "secondary",
+          "movement_type": "overhead_extension",
+          "angle": "incline",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=incline+dumbbell+triceps+extension+long+head+form"
+        },
+        {
+          "id": "jm_press",
+          "name": "JM Press",
+          "priority": "secondary",
+          "movement_type": "overhead_extension",
+          "angle": "flat",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=jm+press+triceps+long+head+form"
+        },
+        {
+          "id": "single_overhead",
+          "name": "Single-arm Overhead Ext",
+          "priority": "secondary",
+          "movement_type": "overhead_extension",
+          "angle": "overhead",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=single+arm+overhead+tricep+extension+long+head+form"
+        },
+        {
+          "id": "cable_skulls",
+          "name": "Cable Skull Crushers",
+          "priority": "primary",
+          "movement_type": "overhead_extension",
+          "angle": "flat",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+skull+crushers+triceps+long+head+form"
+        }
+      ]
+    },
+    "triceps_lateral": {
+      "label": "Triceps Lateral/Medial Head (Pushdowns)",
+      "muscle_group": "upper",
+      "is_lower": false,
+      "exercises": [
+        {
+          "id": "pushdown_rope",
+          "name": "Rope Pushdown",
+          "priority": "primary",
+          "movement_type": "pushdown",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "vB5OHsJ3EME"
+        },
+        {
+          "id": "pushdown_bar",
+          "name": "Bar Pushdown",
+          "priority": "primary",
+          "movement_type": "pushdown",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=bar+tricep+pushdown+lateral+medial+head+form"
+        },
+        {
+          "id": "cgbp",
+          "name": "Close-Grip Bench Press",
+          "priority": "primary",
+          "movement_type": "pushdown",
+          "angle": "flat",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "nEF0bv2Fi-Y"
+        },
+        {
+          "id": "tate_press",
+          "name": "Tate Press",
+          "priority": "secondary",
+          "movement_type": "pushdown",
+          "angle": "flat",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=tate+press+triceps+lateral+medial+head+form"
+        },
+        {
+          "id": "dips_tri",
+          "name": "Weighted Triceps Dips",
+          "priority": "primary",
+          "movement_type": "pushdown",
+          "angle": "decline",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=triceps+dips+lateral+medial+head+form+jeff+nippard"
+        },
+        {
+          "id": "vbar_pushdown",
+          "name": "V-Bar Pushdown",
+          "priority": "primary",
+          "movement_type": "pushdown",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=v+bar+tricep+pushdown+lateral+head+form"
+        },
+        {
+          "id": "machine_tri",
+          "name": "Triceps Machine",
+          "priority": "secondary",
+          "movement_type": "pushdown",
+          "angle": "neutral",
           "difficulty": [
             "easy"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=machine+bicep+curl+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=triceps+machine+lateral+medial+head+form"
+        },
+        {
+          "id": "reverse_pushdown",
+          "name": "Reverse Grip Pushdown",
+          "priority": "secondary",
+          "movement_type": "pushdown",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=reverse+grip+tricep+pushdown+medial+head+form"
+        },
+        {
+          "id": "tri_kickback",
+          "name": "DB Triceps Kickback",
+          "priority": "isolation",
+          "movement_type": "pushdown",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+triceps+kickback+lateral+head+form"
         }
       ]
     },
-    "biceps_isolation": {
-      "label": "Biceps Isolation",
+    "lats_vertical": {
+      "label": "Lats \u2014 Vertical Pull (Width)",
       "muscle_group": "upper",
       "is_lower": false,
       "exercises": [
         {
-          "id": "curl_incline",
-          "name": "Incline DB Curl",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "soxrZlIl35U"
-        },
-        {
-          "id": "curl_conc",
-          "name": "Concentration Curl",
+          "id": "pulldown",
+          "name": "Lat Pulldown",
+          "priority": "primary",
+          "movement_type": "vertical_pull",
+          "angle": "neutral",
           "difficulty": [
             "easy",
             "moderate"
           ],
-          "video_id": "Jvj2wV0vOYU"
+          "video_id": "CAwf7n6Luuc"
         },
         {
-          "id": "preacher_curl",
-          "name": "Preacher Curl",
+          "id": "pullup",
+          "name": "Pull-ups",
+          "priority": "primary",
+          "movement_type": "vertical_pull",
+          "angle": "pronated",
           "difficulty": [
             "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=preacher+curl+proper+form+jeff+nippard"
+          "video_id": "eGo4IYlbE5g"
         },
         {
-          "id": "spider_curl",
-          "name": "Spider Curl",
+          "id": "chinup",
+          "name": "Chin-ups",
+          "priority": "primary",
+          "movement_type": "vertical_pull",
+          "angle": "supinated",
           "difficulty": [
             "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=spider+curl+biceps+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=chin+ups+lats+form+jeff+nippard"
         },
         {
-          "id": "cable_iso_curl",
-          "name": "Single-arm Cable Curl",
+          "id": "neutral_pullup",
+          "name": "Neutral-Grip Pull-up",
+          "priority": "primary",
+          "movement_type": "vertical_pull",
+          "angle": "neutral",
           "difficulty": [
             "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=single+arm+cable+bicep+curl+form"
+          "video_id": "https://www.youtube.com/results?search_query=neutral+grip+pullup+lats+form"
         },
         {
-          "id": "zottman",
-          "name": "Zottman Curl",
+          "id": "weighted_pullup",
+          "name": "Weighted Pull-up",
+          "priority": "primary",
+          "movement_type": "vertical_pull",
+          "angle": "pronated",
           "difficulty": [
-            "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=zottman+curl+proper+form+biceps"
+          "video_id": "https://www.youtube.com/results?search_query=weighted+pullup+lats+form"
         },
         {
-          "id": "cable_21s",
-          "name": "Cable 21s",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=bicep+21s+cable+curl+form"
-        },
-        {
-          "id": "high_cable_curl",
-          "name": "High Cable Curl",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=high+cable+bicep+curl+form"
-        },
-        {
-          "id": "machine_preacher",
-          "name": "Machine Preacher Curl",
+          "id": "wide_pulldown",
+          "name": "Wide-Grip Pulldown",
+          "priority": "secondary",
+          "movement_type": "vertical_pull",
+          "angle": "wide",
           "difficulty": [
             "easy",
             "moderate"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=machine+preacher+curl+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=wide+grip+lat+pulldown+lat+width+form"
+        },
+        {
+          "id": "straight_pulldown",
+          "name": "Straight-arm Pulldown",
+          "priority": "secondary",
+          "movement_type": "vertical_pull",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=straight+arm+pulldown+lats+form+jeff+nippard"
+        },
+        {
+          "id": "single_pulldown",
+          "name": "Single-arm Pulldown",
+          "priority": "secondary",
+          "movement_type": "vertical_pull",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=single+arm+lat+pulldown+lats+form"
+        },
+        {
+          "id": "rev_pulldown",
+          "name": "Reverse-Grip Pulldown",
+          "priority": "secondary",
+          "movement_type": "vertical_pull",
+          "angle": "supinated",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=reverse+grip+lat+pulldown+lats+form"
+        },
+        {
+          "id": "machine_pulldown",
+          "name": "Machine Pulldown",
+          "priority": "secondary",
+          "movement_type": "vertical_pull",
+          "angle": "neutral",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=machine+lat+pulldown+lats+form"
         }
       ]
     },
-    "traps": {
-      "label": "Traps",
+    "lats_horizontal": {
+      "label": "Lats \u2014 Horizontal Row (Thickness)",
       "muscle_group": "upper",
       "is_lower": false,
       "exercises": [
         {
-          "id": "shrug_bar",
-          "name": "Barbell Shrug",
+          "id": "row_bar",
+          "name": "Barbell Row",
+          "priority": "primary",
+          "movement_type": "horizontal_pull",
+          "angle": "pronated",
           "difficulty": [
-            "easy",
             "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=barbell+shrug+proper+form+traps"
+          "video_id": "G8l_8chR5BE"
         },
         {
-          "id": "shrug_db",
-          "name": "Dumbbell Shrug",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=dumbbell+shrug+proper+form+traps"
-        },
-        {
-          "id": "shrug_cable",
-          "name": "Cable Shrug",
+          "id": "row_db",
+          "name": "DB Row",
+          "priority": "primary",
+          "movement_type": "horizontal_pull",
+          "angle": "neutral",
           "difficulty": [
             "easy",
             "moderate"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=cable+shrug+traps+proper+form"
+          "video_id": "roCP2zvD5Js"
         },
         {
-          "id": "trap_bar_shrug",
-          "name": "Trap Bar Shrug",
+          "id": "row_cable",
+          "name": "Cable Row",
+          "priority": "primary",
+          "movement_type": "horizontal_pull",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "UCXmny8EttA"
+        },
+        {
+          "id": "chest_row",
+          "name": "Chest-Supported Row",
+          "priority": "primary",
+          "movement_type": "horizontal_pull",
+          "angle": "prone",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=chest+supported+row+lats+thickness+form+jeff+nippard"
+        },
+        {
+          "id": "pendlay_row",
+          "name": "Pendlay Row",
+          "priority": "primary",
+          "movement_type": "horizontal_pull",
+          "angle": "pronated",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=pendlay+row+lats+form+alan+thrall"
+        },
+        {
+          "id": "meadows_row",
+          "name": "Meadows Row",
+          "priority": "secondary",
+          "movement_type": "horizontal_pull",
+          "angle": "neutral",
           "difficulty": [
             "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=trap+bar+shrug+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=meadows+row+lats+form"
         },
         {
-          "id": "rack_pull_trap",
-          "name": "Rack Pull (Trap Focus)",
-          "difficulty": [
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=rack+pull+trap+focus+proper+form"
-        },
-        {
-          "id": "overhead_shrug",
-          "name": "Overhead Shrug",
-          "difficulty": [
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=overhead+shrug+upper+trap+exercise+form"
-        },
-        {
-          "id": "farmers_trap",
-          "name": "Farmer's Carry (Traps)",
+          "id": "seal_row",
+          "name": "Seal Row",
+          "priority": "secondary",
+          "movement_type": "horizontal_pull",
+          "angle": "prone",
           "difficulty": [
             "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=farmers+carry+trap+development+form"
+          "video_id": "https://www.youtube.com/results?search_query=seal+row+lats+thickness+form"
         },
         {
-          "id": "face_pull_trap",
+          "id": "t_bar_row",
+          "name": "T-Bar Row",
+          "priority": "primary",
+          "movement_type": "horizontal_pull",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=t+bar+row+lats+form"
+        },
+        {
+          "id": "machine_row",
+          "name": "Machine Row",
+          "priority": "secondary",
+          "movement_type": "horizontal_pull",
+          "angle": "neutral",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=machine+row+lats+form"
+        },
+        {
+          "id": "iso_row",
+          "name": "Iso-Lateral Row",
+          "priority": "secondary",
+          "movement_type": "horizontal_pull",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=iso+lateral+row+lats+form"
+        },
+        {
+          "id": "incline_row",
+          "name": "Incline DB Row",
+          "priority": "secondary",
+          "movement_type": "horizontal_pull",
+          "angle": "incline",
+          "difficulty": [
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=incline+dumbbell+row+lats+form"
+        }
+      ]
+    },
+    "upper_back": {
+      "label": "Upper Back (Rhomboids / Mid Traps)",
+      "muscle_group": "upper",
+      "is_lower": false,
+      "exercises": [
+        {
+          "id": "face_pull_ub",
           "name": "Face Pull",
+          "priority": "primary",
+          "movement_type": "rear_delt_fly",
+          "angle": "neutral",
           "difficulty": [
             "easy",
             "moderate",
@@ -1057,8 +1257,185 @@
           "video_id": "HSoHeSJFOWs"
         },
         {
+          "id": "rev_fly_ub",
+          "name": "Reverse Fly",
+          "priority": "primary",
+          "movement_type": "rear_delt_fly",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "imRBoJqozKI"
+        },
+        {
+          "id": "prone_y_ub",
+          "name": "Prone Y Raise",
+          "priority": "secondary",
+          "movement_type": "rear_delt_fly",
+          "angle": "prone",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=prone+y+raise+rhomboids+upper+back+form"
+        },
+        {
+          "id": "ytwl_ub",
+          "name": "YTWL Raises",
+          "priority": "secondary",
+          "movement_type": "rear_delt_fly",
+          "angle": "prone",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=YTWL+raises+upper+back+rhomboids+form"
+        },
+        {
+          "id": "cable_pull_face2",
+          "name": "Cable Pull to Face",
+          "priority": "secondary",
+          "movement_type": "rear_delt_fly",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+pull+to+face+upper+back+rhomboids+form"
+        },
+        {
+          "id": "w_raise_ub",
+          "name": "W-Raise",
+          "priority": "secondary",
+          "movement_type": "rear_delt_fly",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=w+raise+upper+back+rhomboids+form"
+        },
+        {
+          "id": "chest_sup_row",
+          "name": "Chest-Supported Rear Fly",
+          "priority": "secondary",
+          "movement_type": "rear_delt_fly",
+          "angle": "prone",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=chest+supported+rear+fly+rhomboids+mid+traps+form"
+        },
+        {
+          "id": "trap3_raise",
+          "name": "Trap-3 Raise",
+          "priority": "secondary",
+          "movement_type": "rear_delt_fly",
+          "angle": "prone",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=trap+3+raise+lower+trapezius+scapular+form"
+        }
+      ]
+    },
+    "traps_upper": {
+      "label": "Upper Traps",
+      "muscle_group": "upper",
+      "is_lower": false,
+      "exercises": [
+        {
+          "id": "shrug_bar",
+          "name": "Barbell Shrug",
+          "priority": "primary",
+          "movement_type": "shrug",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=barbell+shrug+upper+traps+form"
+        },
+        {
+          "id": "shrug_db",
+          "name": "Dumbbell Shrug",
+          "priority": "primary",
+          "movement_type": "shrug",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+shrug+upper+traps+form"
+        },
+        {
+          "id": "shrug_cable",
+          "name": "Cable Shrug",
+          "priority": "secondary",
+          "movement_type": "shrug",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+shrug+upper+traps+form"
+        },
+        {
+          "id": "trap_bar_shrug",
+          "name": "Trap Bar Shrug",
+          "priority": "primary",
+          "movement_type": "shrug",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=trap+bar+shrug+upper+traps+form"
+        },
+        {
+          "id": "rack_pull_trap",
+          "name": "Rack Pull (Trap Focus)",
+          "priority": "primary",
+          "movement_type": "shrug",
+          "angle": "neutral",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=rack+pull+upper+traps+focus+form"
+        },
+        {
+          "id": "overhead_shrug",
+          "name": "Overhead Shrug",
+          "priority": "secondary",
+          "movement_type": "shrug",
+          "angle": "overhead",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=overhead+shrug+upper+traps+form"
+        },
+        {
+          "id": "farmers_trap",
+          "name": "Farmer's Carry (Traps)",
+          "priority": "secondary",
+          "movement_type": "carry",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=farmers+carry+upper+traps+form"
+        },
+        {
           "id": "snatch_shrug",
           "name": "Snatch-Grip Shrug",
+          "priority": "secondary",
+          "movement_type": "shrug",
+          "angle": "wide",
           "difficulty": [
             "hardcore"
           ],
@@ -1067,522 +1444,322 @@
         {
           "id": "iso_shrug",
           "name": "Isometric Shrug Hold",
+          "priority": "isolation",
+          "movement_type": "shrug",
+          "angle": "neutral",
           "difficulty": [
             "easy",
             "moderate"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=isometric+shrug+hold+trap+exercise"
+          "video_id": "https://www.youtube.com/results?search_query=isometric+shrug+hold+upper+traps+form"
         }
       ]
     },
-    "squat_pattern": {
-      "label": "Squat Pattern",
-      "muscle_group": "lower",
-      "is_lower": true,
+    "biceps_long": {
+      "label": "Biceps Long Head (Outer Peak)",
+      "muscle_group": "upper",
+      "is_lower": false,
       "exercises": [
         {
-          "id": "squat_bar",
-          "name": "Barbell Back Squat",
+          "id": "curl_incline",
+          "name": "Incline DB Curl",
+          "priority": "primary",
+          "movement_type": "curl",
+          "angle": "incline",
           "difficulty": [
             "moderate",
             "hardcore"
           ],
-          "video_id": "bEv6CCg2BC8"
+          "video_id": "soxrZlIl35U"
         },
         {
-          "id": "squat_goblet",
-          "name": "Goblet Squat",
-          "difficulty": [
-            "easy"
-          ],
-          "video_id": "MeIiIdhvXT4"
-        },
-        {
-          "id": "leg_press",
-          "name": "Leg Press",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "IZxyjW7MPJQ"
-        },
-        {
-          "id": "front_squat",
-          "name": "Front Squat",
-          "difficulty": [
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=front+squat+proper+form+alan+thrall"
-        },
-        {
-          "id": "box_squat",
-          "name": "Box Squat",
+          "id": "cable_behind",
+          "name": "Cable Curl (Behind Body)",
+          "priority": "primary",
+          "movement_type": "curl",
+          "angle": "behind",
           "difficulty": [
             "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=box+squat+proper+form+alan+thrall"
+          "video_id": "https://www.youtube.com/results?search_query=cable+curl+behind+body+biceps+long+head+peak+form+jeff+nippard"
         },
         {
-          "id": "safety_squat",
-          "name": "Safety Bar Squat",
+          "id": "drag_curl",
+          "name": "Drag Curl",
+          "priority": "primary",
+          "movement_type": "curl",
+          "angle": "behind",
           "difficulty": [
             "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=safety+bar+squat+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=drag+curl+biceps+long+head+form"
         },
         {
-          "id": "zercher",
-          "name": "Zercher Squat",
+          "id": "high_cable_curl",
+          "name": "High Cable Curl",
+          "priority": "secondary",
+          "movement_type": "curl",
+          "angle": "overhead",
           "difficulty": [
+            "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=zercher+squat+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=high+cable+curl+biceps+long+head+peak+form"
         },
         {
-          "id": "smith_squat",
-          "name": "Smith Machine Squat",
+          "id": "spider_curl",
+          "name": "Spider Curl",
+          "priority": "secondary",
+          "movement_type": "curl",
+          "angle": "prone",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=spider+curl+biceps+long+head+form"
+        },
+        {
+          "id": "db_curl_long",
+          "name": "Dumbbell Curl (Supinated)",
+          "priority": "secondary",
+          "movement_type": "curl",
+          "angle": "supinated",
           "difficulty": [
             "easy",
             "moderate"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=smith+machine+squat+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+bicep+curl+supinated+long+head+form"
         },
         {
-          "id": "pause_squat",
-          "name": "Pause Squat",
+          "id": "overhead_curl",
+          "name": "Overhead Cable Curl",
+          "priority": "secondary",
+          "movement_type": "curl",
+          "angle": "overhead",
           "difficulty": [
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=pause+squat+proper+form+alan+thrall"
+          "video_id": "https://www.youtube.com/results?search_query=overhead+cable+curl+biceps+long+head+peak+form"
         },
         {
-          "id": "high_leg_press",
-          "name": "High-Foot Leg Press",
+          "id": "bayesian_curl",
+          "name": "Bayesian Curl",
+          "priority": "primary",
+          "movement_type": "curl",
+          "angle": "behind",
           "difficulty": [
-            "easy",
-            "moderate"
+            "moderate",
+            "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=high+foot+placement+leg+press+glutes+form"
+          "video_id": "https://www.youtube.com/results?search_query=bayesian+curl+biceps+long+head+stretch+form+jeff+nippard"
         }
       ]
     },
-    "hip_hinge": {
-      "label": "Hip Hinge",
-      "muscle_group": "lower",
-      "is_lower": true,
+    "biceps_short": {
+      "label": "Biceps Short Head (Inner Width)",
+      "muscle_group": "upper",
+      "is_lower": false,
       "exercises": [
         {
-          "id": "rdl",
-          "name": "Romanian Deadlift",
-          "difficulty": [
-            "easy",
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "JCXZnBiOcH8"
-        },
-        {
-          "id": "deadlift",
-          "name": "Barbell Deadlift",
+          "id": "preacher_curl",
+          "name": "Preacher Curl",
+          "priority": "primary",
+          "movement_type": "curl",
+          "angle": "preacher",
           "difficulty": [
             "moderate",
             "hardcore"
           ],
-          "video_id": "VL5Ab0T_S8I"
+          "video_id": "https://www.youtube.com/results?search_query=preacher+curl+biceps+short+head+width+form+jeff+nippard"
         },
         {
-          "id": "trap_bar_dl",
-          "name": "Trap Bar Deadlift",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=trap+bar+deadlift+proper+form+alan+thrall"
-        },
-        {
-          "id": "sumo_dl",
-          "name": "Sumo Deadlift",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=sumo+deadlift+proper+form+alan+thrall"
-        },
-        {
-          "id": "single_rdl",
-          "name": "Single-leg RDL",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=single+leg+romanian+deadlift+proper+form+jeff+nippard"
-        },
-        {
-          "id": "good_morning",
-          "name": "Good Morning",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=good+morning+exercise+proper+form+alan+thrall"
-        },
-        {
-          "id": "rack_pull",
-          "name": "Rack Pull",
-          "difficulty": [
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=rack+pull+deadlift+proper+form"
-        },
-        {
-          "id": "db_rdl",
-          "name": "Dumbbell RDL",
+          "id": "curl_conc",
+          "name": "Concentration Curl",
+          "priority": "primary",
+          "movement_type": "curl",
+          "angle": "preacher",
           "difficulty": [
             "easy",
             "moderate"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=dumbbell+romanian+deadlift+proper+form"
+          "video_id": "Jvj2wV0vOYU"
         },
         {
-          "id": "stiff_leg_dl",
-          "name": "Stiff-Leg Deadlift",
+          "id": "machine_preacher",
+          "name": "Machine Preacher Curl",
+          "priority": "primary",
+          "movement_type": "curl",
+          "angle": "preacher",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=machine+preacher+curl+biceps+short+head+form"
+        },
+        {
+          "id": "cable_iso_curl",
+          "name": "Single-arm Cable Curl",
+          "priority": "secondary",
+          "movement_type": "curl",
+          "angle": "neutral",
           "difficulty": [
             "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=stiff+leg+deadlift+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=single+arm+cable+curl+biceps+short+head+form"
         },
         {
-          "id": "deficit_dl",
-          "name": "Deficit Deadlift",
+          "id": "zottman",
+          "name": "Zottman Curl",
+          "priority": "secondary",
+          "movement_type": "curl",
+          "angle": "supinated",
           "difficulty": [
+            "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=deficit+deadlift+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=zottman+curl+biceps+form"
+        },
+        {
+          "id": "seated_db_curl",
+          "name": "Seated DB Curl",
+          "priority": "secondary",
+          "movement_type": "curl",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=seated+dumbbell+curl+biceps+short+head+form"
+        },
+        {
+          "id": "curl_bar",
+          "name": "Barbell Curl",
+          "priority": "primary",
+          "movement_type": "curl",
+          "angle": "supinated",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "kwG2ipFRgfo"
+        },
+        {
+          "id": "ez_curl",
+          "name": "EZ-Bar Curl",
+          "priority": "primary",
+          "movement_type": "curl",
+          "angle": "supinated",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=ez+bar+curl+proper+form"
+        },
+        {
+          "id": "close_curl",
+          "name": "Close-Grip EZ Bar Curl",
+          "priority": "secondary",
+          "movement_type": "curl",
+          "angle": "supinated",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=close+grip+ez+bar+curl+biceps+short+head+form"
         }
       ]
     },
-    "quad_isolation": {
-      "label": "Quad Isolation",
-      "muscle_group": "lower",
-      "is_lower": true,
+    "brachialis": {
+      "label": "Brachialis",
+      "muscle_group": "upper",
+      "is_lower": false,
       "exercises": [
         {
-          "id": "leg_ext",
-          "name": "Leg Extension",
+          "id": "curl_hammer",
+          "name": "Hammer Curl",
+          "priority": "primary",
+          "movement_type": "hammer_curl",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "zC3nMkuokxs"
+        },
+        {
+          "id": "rev_curl",
+          "name": "Reverse Barbell Curl",
+          "priority": "primary",
+          "movement_type": "reverse_curl",
+          "angle": "pronated",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=reverse+barbell+curl+brachialis+form+jeff+nippard"
+        },
+        {
+          "id": "rev_ez_curl",
+          "name": "Reverse EZ-Bar Curl",
+          "priority": "primary",
+          "movement_type": "reverse_curl",
+          "angle": "pronated",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=reverse+ez+bar+curl+brachialis+form"
+        },
+        {
+          "id": "rev_cable_curl",
+          "name": "Reverse Cable Curl",
+          "priority": "secondary",
+          "movement_type": "reverse_curl",
+          "angle": "pronated",
           "difficulty": [
             "easy",
             "moderate"
           ],
-          "video_id": "m0FOpMEgB_Y"
+          "video_id": "https://www.youtube.com/results?search_query=reverse+cable+curl+brachialis+form"
         },
         {
-          "id": "bulgarian",
-          "name": "Bulgarian Split Squat",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=bulgarian+split+squat+proper+form+jeff+nippard"
-        },
-        {
-          "id": "hack_squat",
-          "name": "Hack Squat (Machine)",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=hack+squat+machine+proper+form"
-        },
-        {
-          "id": "lunge_bar",
-          "name": "Barbell Lunge",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=barbell+lunge+proper+form"
-        },
-        {
-          "id": "lunge_db",
-          "name": "Dumbbell Lunge",
+          "id": "neutral_curl",
+          "name": "Neutral-Grip Cable Curl",
+          "priority": "secondary",
+          "movement_type": "hammer_curl",
+          "angle": "neutral",
           "difficulty": [
             "easy",
             "moderate"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=dumbbell+lunge+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=neutral+grip+cable+curl+brachialis+form"
         },
         {
-          "id": "step_up",
-          "name": "Step-Up",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=step+up+exercise+quads+proper+form"
-        },
-        {
-          "id": "sissy_squat",
-          "name": "Sissy Squat",
-          "difficulty": [
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=sissy+squat+proper+form+quads"
-        },
-        {
-          "id": "leg_press_iso",
-          "name": "Single-leg Leg Press",
+          "id": "pinwheel_curl",
+          "name": "Pinwheel Curl",
+          "priority": "secondary",
+          "movement_type": "hammer_curl",
+          "angle": "neutral",
           "difficulty": [
             "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=single+leg+press+quad+isolation+form"
+          "video_id": "https://www.youtube.com/results?search_query=pinwheel+curl+brachialis+forearm+form"
         },
         {
-          "id": "walking_lunge",
-          "name": "Walking Lunge",
+          "id": "cross_body_curl",
+          "name": "Cross-Body Hammer Curl",
+          "priority": "secondary",
+          "movement_type": "hammer_curl",
+          "angle": "neutral",
           "difficulty": [
             "moderate"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=walking+lunge+proper+form+quads"
-        },
-        {
-          "id": "spanish_squat",
-          "name": "Spanish Squat",
-          "difficulty": [
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=spanish+squat+quad+exercise+form"
-        }
-      ]
-    },
-    "hamstring_isolation": {
-      "label": "Hamstring Isolation",
-      "muscle_group": "lower",
-      "is_lower": true,
-      "exercises": [
-        {
-          "id": "leg_curl",
-          "name": "Lying Leg Curl",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "1Tq3QdYUuHs"
-        },
-        {
-          "id": "nordic_curl",
-          "name": "Nordic Curl",
-          "difficulty": [
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=nordic+curl+hamstring+proper+form+jeff+nippard"
-        },
-        {
-          "id": "seated_leg_curl",
-          "name": "Seated Leg Curl",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=seated+leg+curl+hamstring+proper+form"
-        },
-        {
-          "id": "db_leg_curl",
-          "name": "DB Leg Curl",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=dumbbell+leg+curl+lying+proper+form"
-        },
-        {
-          "id": "glute_ham_raise",
-          "name": "Glute-Ham Raise",
-          "difficulty": [
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=glute+ham+raise+proper+form"
-        },
-        {
-          "id": "cable_leg_curl",
-          "name": "Cable Leg Curl",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=cable+leg+curl+standing+hamstring+form"
-        },
-        {
-          "id": "single_leg_curl",
-          "name": "Single-leg Curl",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=single+leg+curl+machine+hamstring+form"
-        },
-        {
-          "id": "swiss_curl",
-          "name": "Swiss Ball Leg Curl",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=swiss+ball+leg+curl+hamstring+form"
-        }
-      ]
-    },
-    "calves": {
-      "label": "Calves",
-      "muscle_group": "lower",
-      "is_lower": true,
-      "exercises": [
-        {
-          "id": "calf_stand",
-          "name": "Standing Calf Raise",
-          "difficulty": [
-            "easy",
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "gwLzBv7i5UA"
-        },
-        {
-          "id": "calf_seat",
-          "name": "Seated Calf Raise",
-          "difficulty": [
-            "easy",
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "JbyjNymZOt0"
-        },
-        {
-          "id": "calf_leg_press",
-          "name": "Leg Press Calf Raise",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=leg+press+calf+raise+proper+form"
-        },
-        {
-          "id": "donkey_calf",
-          "name": "Donkey Calf Raise",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=donkey+calf+raise+proper+form"
-        },
-        {
-          "id": "single_calf",
-          "name": "Single-leg Calf Raise",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=single+leg+calf+raise+proper+form"
-        },
-        {
-          "id": "smith_calf",
-          "name": "Smith Machine Calf Raise",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=smith+machine+calf+raise+proper+form"
-        },
-        {
-          "id": "pause_calf",
-          "name": "Pause Calf Raise",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=pause+calf+raise+slow+tempo+form"
-        }
-      ]
-    },
-    "glute_isolation": {
-      "label": "Glute Isolation",
-      "muscle_group": "lower",
-      "is_lower": true,
-      "exercises": [
-        {
-          "id": "hip_thrust",
-          "name": "Hip Thrust",
-          "difficulty": [
-            "easy",
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "xDmFkJxPzeM"
-        },
-        {
-          "id": "cable_kickback",
-          "name": "Cable Kickback",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=cable+glute+kickback+proper+form"
-        },
-        {
-          "id": "bstance_thrust",
-          "name": "B-Stance Hip Thrust",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=b+stance+hip+thrust+proper+form"
-        },
-        {
-          "id": "glute_bridge",
-          "name": "Barbell Glute Bridge",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=barbell+glute+bridge+proper+form+jeff+nippard"
-        },
-        {
-          "id": "abductor",
-          "name": "Machine Abductor",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=hip+abductor+machine+proper+form+glutes"
-        },
-        {
-          "id": "single_thrust",
-          "name": "Single-leg Hip Thrust",
-          "difficulty": [
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=single+leg+hip+thrust+proper+form"
-        },
-        {
-          "id": "frog_pump",
-          "name": "Frog Pump",
-          "difficulty": [
-            "easy",
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=frog+pump+glute+exercise+form"
-        },
-        {
-          "id": "cable_pull_through",
-          "name": "Cable Pull-Through",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=cable+pull+through+glutes+form"
+          "video_id": "https://www.youtube.com/results?search_query=cross+body+hammer+curl+brachialis+form"
         }
       ]
     },
@@ -1593,69 +1770,59 @@
       "exercises": [
         {
           "id": "wrist_curl",
-          "name": "Wrist Curl (Barbell)",
+          "name": "Barbell Wrist Curl",
+          "priority": "primary",
+          "movement_type": "wrist_flexion",
+          "angle": "neutral",
           "difficulty": [
             "easy",
             "moderate"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=barbell+wrist+curl+forearms+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=barbell+wrist+curl+forearms+flexors+form"
         },
         {
           "id": "rev_wrist_curl",
           "name": "Reverse Wrist Curl",
+          "priority": "primary",
+          "movement_type": "wrist_extension",
+          "angle": "neutral",
           "difficulty": [
             "easy",
             "moderate"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=reverse+wrist+curl+forearms+proper+form"
-        },
-        {
-          "id": "rev_curl",
-          "name": "Reverse Barbell Curl",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=reverse+barbell+curl+forearms+brachialis+form"
+          "video_id": "https://www.youtube.com/results?search_query=reverse+wrist+curl+forearm+extensors+form"
         },
         {
           "id": "farmers_carry",
           "name": "Farmer's Carry",
+          "priority": "primary",
+          "movement_type": "carry",
+          "angle": "neutral",
           "difficulty": [
             "easy",
             "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=farmers+carry+proper+form+forearms+grip"
+          "video_id": "https://www.youtube.com/results?search_query=farmers+carry+forearms+grip+form"
         },
         {
           "id": "plate_pinch",
           "name": "Plate Pinch",
+          "priority": "secondary",
+          "movement_type": "carry",
+          "angle": "neutral",
           "difficulty": [
             "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=plate+pinch+grip+strength+forearms"
-        },
-        {
-          "id": "hammer_iso",
-          "name": "Hammer Curl ISO Hold",
-          "difficulty": [
-            "moderate"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=hammer+curl+isometric+hold+forearms"
-        },
-        {
-          "id": "towel_pullup",
-          "name": "Towel Pull-up",
-          "difficulty": [
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=towel+pullup+grip+strength+forearms"
+          "video_id": "https://www.youtube.com/results?search_query=plate+pinch+forearms+grip+strength+form"
         },
         {
           "id": "db_wrist_curl",
           "name": "DB Wrist Curl",
+          "priority": "secondary",
+          "movement_type": "wrist_flexion",
+          "angle": "neutral",
           "difficulty": [
             "easy"
           ],
@@ -1664,11 +1831,1207 @@
         {
           "id": "cable_wrist_curl",
           "name": "Cable Wrist Curl",
+          "priority": "secondary",
+          "movement_type": "wrist_flexion",
+          "angle": "neutral",
           "difficulty": [
             "easy",
             "moderate"
           ],
           "video_id": "https://www.youtube.com/results?search_query=cable+wrist+curl+forearms+form"
+        },
+        {
+          "id": "wrist_roller",
+          "name": "Wrist Roller",
+          "priority": "secondary",
+          "movement_type": "wrist_flexion",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=wrist+roller+forearms+grip+form"
+        }
+      ]
+    },
+    "quads_compound": {
+      "label": "Quads \u2014 Compound (Squat Pattern)",
+      "muscle_group": "lower",
+      "is_lower": true,
+      "exercises": [
+        {
+          "id": "squat_bar",
+          "name": "Barbell Back Squat",
+          "priority": "primary",
+          "movement_type": "squat",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "bEv6CCg2BC8"
+        },
+        {
+          "id": "squat_goblet",
+          "name": "Goblet Squat",
+          "priority": "primary",
+          "movement_type": "squat",
+          "angle": "neutral",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "MeIiIdhvXT4"
+        },
+        {
+          "id": "leg_press",
+          "name": "Leg Press",
+          "priority": "primary",
+          "movement_type": "squat",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "IZxyjW7MPJQ"
+        },
+        {
+          "id": "front_squat",
+          "name": "Front Squat",
+          "priority": "primary",
+          "movement_type": "squat",
+          "angle": "neutral",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=front+squat+quads+form+alan+thrall"
+        },
+        {
+          "id": "box_squat",
+          "name": "Box Squat",
+          "priority": "secondary",
+          "movement_type": "squat",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=box+squat+quads+form+alan+thrall"
+        },
+        {
+          "id": "safety_squat",
+          "name": "Safety Bar Squat",
+          "priority": "secondary",
+          "movement_type": "squat",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=safety+bar+squat+quads+form"
+        },
+        {
+          "id": "smith_squat",
+          "name": "Smith Machine Squat",
+          "priority": "secondary",
+          "movement_type": "squat",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=smith+machine+squat+quads+form"
+        },
+        {
+          "id": "pause_squat",
+          "name": "Pause Squat",
+          "priority": "secondary",
+          "movement_type": "squat",
+          "angle": "neutral",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=pause+squat+quads+form+alan+thrall"
+        },
+        {
+          "id": "zercher",
+          "name": "Zercher Squat",
+          "priority": "secondary",
+          "movement_type": "squat",
+          "angle": "neutral",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=zercher+squat+quads+form"
+        }
+      ]
+    },
+    "quads_isolation": {
+      "label": "Quads \u2014 Isolation + VMO",
+      "muscle_group": "lower",
+      "is_lower": true,
+      "exercises": [
+        {
+          "id": "leg_ext",
+          "name": "Leg Extension",
+          "priority": "primary",
+          "movement_type": "knee_extension",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "m0FOpMEgB_Y"
+        },
+        {
+          "id": "bulgarian",
+          "name": "Bulgarian Split Squat",
+          "priority": "primary",
+          "movement_type": "squat",
+          "angle": "split",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=bulgarian+split+squat+quads+form+jeff+nippard"
+        },
+        {
+          "id": "hack_squat",
+          "name": "Hack Squat (Machine)",
+          "priority": "primary",
+          "movement_type": "squat",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=hack+squat+machine+quads+form"
+        },
+        {
+          "id": "lunge_bar",
+          "name": "Barbell Lunge",
+          "priority": "secondary",
+          "movement_type": "squat",
+          "angle": "split",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=barbell+lunge+quads+form"
+        },
+        {
+          "id": "lunge_db",
+          "name": "Dumbbell Lunge",
+          "priority": "secondary",
+          "movement_type": "squat",
+          "angle": "split",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+lunge+quads+form"
+        },
+        {
+          "id": "step_up",
+          "name": "Step-Up",
+          "priority": "secondary",
+          "movement_type": "squat",
+          "angle": "split",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=step+up+exercise+quads+form"
+        },
+        {
+          "id": "single_leg_press",
+          "name": "Single-leg Leg Press",
+          "priority": "secondary",
+          "movement_type": "squat",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=single+leg+press+quads+isolation+form"
+        },
+        {
+          "id": "close_leg_press",
+          "name": "Close-Stance Leg Press (VMO)",
+          "priority": "secondary",
+          "movement_type": "knee_extension",
+          "angle": "close",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=close+stance+leg+press+vmo+teardrop+form"
+        },
+        {
+          "id": "tke",
+          "name": "Terminal Knee Extension (VMO)",
+          "priority": "isolation",
+          "movement_type": "knee_extension",
+          "angle": "close",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=terminal+knee+extension+vmo+teardrop+form"
+        },
+        {
+          "id": "sissy_squat",
+          "name": "Sissy Squat",
+          "priority": "secondary",
+          "movement_type": "squat",
+          "angle": "close",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=sissy+squat+quads+vmo+form"
+        },
+        {
+          "id": "spanish_squat",
+          "name": "Spanish Squat (VMO)",
+          "priority": "secondary",
+          "movement_type": "squat",
+          "angle": "close",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=spanish+squat+vmo+teardrop+form"
+        },
+        {
+          "id": "cyclist_squat",
+          "name": "Cyclist Squat",
+          "priority": "primary",
+          "movement_type": "squat",
+          "angle": "close",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cyclist+squat+heel+elevated+quad+hypertrophy+form+jeff+nippard"
+        },
+        {
+          "id": "heel_squat",
+          "name": "Heel-Elevated Squat",
+          "priority": "secondary",
+          "movement_type": "squat",
+          "angle": "close",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=heel+elevated+squat+quad+dominant+form"
+        },
+        {
+          "id": "belt_squat",
+          "name": "Belt Squat",
+          "priority": "primary",
+          "movement_type": "squat",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=belt+squat+quads+form"
+        }
+      ]
+    },
+    "hamstrings_curl": {
+      "label": "Hamstrings \u2014 Knee Flexion",
+      "muscle_group": "lower",
+      "is_lower": true,
+      "exercises": [
+        {
+          "id": "leg_curl",
+          "name": "Lying Leg Curl",
+          "priority": "primary",
+          "movement_type": "knee_flexion",
+          "angle": "prone",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "1Tq3QdYUuHs"
+        },
+        {
+          "id": "seated_leg_curl",
+          "name": "Seated Leg Curl",
+          "priority": "primary",
+          "movement_type": "knee_flexion",
+          "angle": "seated",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=seated+leg+curl+hamstrings+knee+flexion+form+jeff+nippard"
+        },
+        {
+          "id": "nordic_curl",
+          "name": "Nordic Curl",
+          "priority": "primary",
+          "movement_type": "knee_flexion",
+          "angle": "prone",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=nordic+curl+hamstrings+form+jeff+nippard"
+        },
+        {
+          "id": "db_leg_curl",
+          "name": "DB Leg Curl",
+          "priority": "secondary",
+          "movement_type": "knee_flexion",
+          "angle": "prone",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+leg+curl+hamstrings+form"
+        },
+        {
+          "id": "cable_leg_curl",
+          "name": "Standing Cable Leg Curl",
+          "priority": "secondary",
+          "movement_type": "knee_flexion",
+          "angle": "standing",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=standing+cable+leg+curl+hamstrings+form"
+        },
+        {
+          "id": "single_leg_curl",
+          "name": "Single-leg Curl",
+          "priority": "secondary",
+          "movement_type": "knee_flexion",
+          "angle": "prone",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=single+leg+curl+hamstrings+form"
+        },
+        {
+          "id": "glute_ham_raise",
+          "name": "Glute-Ham Raise",
+          "priority": "primary",
+          "movement_type": "knee_flexion",
+          "angle": "prone",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=glute+ham+raise+hamstrings+form"
+        },
+        {
+          "id": "swiss_curl",
+          "name": "Swiss Ball Leg Curl",
+          "priority": "secondary",
+          "movement_type": "knee_flexion",
+          "angle": "supine",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=swiss+ball+leg+curl+hamstrings+form"
+        },
+        {
+          "id": "reverse_nordic",
+          "name": "Reverse Nordic Curl",
+          "priority": "secondary",
+          "movement_type": "knee_extension",
+          "angle": "prone",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=reverse+nordic+curl+quad+hamstring+form"
+        }
+      ]
+    },
+    "hamstrings_hinge": {
+      "label": "Hamstrings \u2014 Hip Extension (Hinge)",
+      "muscle_group": "lower",
+      "is_lower": true,
+      "exercises": [
+        {
+          "id": "rdl",
+          "name": "Romanian Deadlift",
+          "priority": "primary",
+          "movement_type": "hinge",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "JCXZnBiOcH8"
+        },
+        {
+          "id": "deadlift",
+          "name": "Barbell Deadlift",
+          "priority": "primary",
+          "movement_type": "hinge",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "VL5Ab0T_S8I"
+        },
+        {
+          "id": "db_rdl",
+          "name": "Dumbbell RDL",
+          "priority": "primary",
+          "movement_type": "hinge",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+rdl+hamstrings+hip+extension+form"
+        },
+        {
+          "id": "single_rdl",
+          "name": "Single-leg RDL",
+          "priority": "secondary",
+          "movement_type": "hinge",
+          "angle": "split",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=single+leg+rdl+hamstrings+form+jeff+nippard"
+        },
+        {
+          "id": "good_morning",
+          "name": "Good Morning",
+          "priority": "secondary",
+          "movement_type": "hinge",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=good+morning+hamstrings+form+alan+thrall"
+        },
+        {
+          "id": "sumo_dl",
+          "name": "Sumo Deadlift",
+          "priority": "primary",
+          "movement_type": "hinge",
+          "angle": "wide",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=sumo+deadlift+hamstrings+form+alan+thrall"
+        },
+        {
+          "id": "trap_bar_dl",
+          "name": "Trap Bar Deadlift",
+          "priority": "primary",
+          "movement_type": "hinge",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=trap+bar+deadlift+hamstrings+form"
+        },
+        {
+          "id": "stiff_leg_dl",
+          "name": "Stiff-Leg Deadlift",
+          "priority": "secondary",
+          "movement_type": "hinge",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=stiff+leg+deadlift+hamstrings+form"
+        },
+        {
+          "id": "deficit_dl",
+          "name": "Deficit Deadlift",
+          "priority": "secondary",
+          "movement_type": "hinge",
+          "angle": "neutral",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=deficit+deadlift+hamstrings+form"
+        },
+        {
+          "id": "kb_swing",
+          "name": "Kettlebell Swing",
+          "priority": "secondary",
+          "movement_type": "hinge",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate"
+          ],
+          "video_id": "YSxHkQUEZQs"
+        }
+      ]
+    },
+    "glutes_max": {
+      "label": "Glutes \u2014 Gluteus Maximus",
+      "muscle_group": "lower",
+      "is_lower": true,
+      "exercises": [
+        {
+          "id": "hip_thrust",
+          "name": "Hip Thrust",
+          "priority": "primary",
+          "movement_type": "hip_thrust",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "xDmFkJxPzeM"
+        },
+        {
+          "id": "glute_bridge",
+          "name": "Barbell Glute Bridge",
+          "priority": "primary",
+          "movement_type": "hip_thrust",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=barbell+glute+bridge+glutes+max+form+jeff+nippard"
+        },
+        {
+          "id": "bstance_thrust",
+          "name": "B-Stance Hip Thrust",
+          "priority": "secondary",
+          "movement_type": "hip_thrust",
+          "angle": "split",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=b+stance+hip+thrust+glutes+max+form"
+        },
+        {
+          "id": "single_thrust",
+          "name": "Single-leg Hip Thrust",
+          "priority": "secondary",
+          "movement_type": "hip_thrust",
+          "angle": "split",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=single+leg+hip+thrust+glutes+max+form"
+        },
+        {
+          "id": "cable_pull_thru",
+          "name": "Cable Pull-Through",
+          "priority": "secondary",
+          "movement_type": "hinge",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+pull+through+glutes+max+form"
+        },
+        {
+          "id": "frog_pump",
+          "name": "Frog Pump",
+          "priority": "isolation",
+          "movement_type": "hip_thrust",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=frog+pump+glutes+max+form"
+        },
+        {
+          "id": "high_leg_press_g",
+          "name": "High-Foot Leg Press (Glutes)",
+          "priority": "secondary",
+          "movement_type": "squat",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=high+foot+leg+press+glutes+max+form"
+        },
+        {
+          "id": "kas_bridge",
+          "name": "Kas Glute Bridge",
+          "priority": "secondary",
+          "movement_type": "hip_thrust",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=kas+glute+bridge+partial+range+glutes+form"
+        },
+        {
+          "id": "step_back_lunge",
+          "name": "Step-Back Lunge",
+          "priority": "secondary",
+          "movement_type": "squat",
+          "angle": "split",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=step+back+reverse+lunge+glutes+form"
+        }
+      ]
+    },
+    "glutes_med": {
+      "label": "Glutes \u2014 Gluteus Medius",
+      "muscle_group": "lower",
+      "is_lower": true,
+      "exercises": [
+        {
+          "id": "abductor",
+          "name": "Machine Hip Abductor",
+          "priority": "primary",
+          "movement_type": "hip_abduction",
+          "angle": "seated",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=hip+abductor+machine+glutes+med+form"
+        },
+        {
+          "id": "cable_abduction",
+          "name": "Cable Hip Abduction",
+          "priority": "primary",
+          "movement_type": "hip_abduction",
+          "angle": "standing",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+hip+abduction+glutes+medius+form"
+        },
+        {
+          "id": "cable_kickback",
+          "name": "Cable Kickback",
+          "priority": "secondary",
+          "movement_type": "hip_abduction",
+          "angle": "standing",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+glute+kickback+glutes+med+form"
+        },
+        {
+          "id": "curtsy_lunge",
+          "name": "Curtsy Lunge",
+          "priority": "secondary",
+          "movement_type": "squat",
+          "angle": "split",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=curtsy+lunge+glutes+medius+form"
+        },
+        {
+          "id": "side_lying_clam",
+          "name": "Clamshell (Weighted)",
+          "priority": "isolation",
+          "movement_type": "hip_abduction",
+          "angle": "lateral",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=clamshell+exercise+glutes+medius+form"
+        },
+        {
+          "id": "single_leg_dl_med",
+          "name": "Single-leg DL (Glute Med)",
+          "priority": "secondary",
+          "movement_type": "hinge",
+          "angle": "split",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=single+leg+deadlift+glute+medius+balance+form"
+        },
+        {
+          "id": "lateral_band_walk",
+          "name": "Lateral Band Walk",
+          "priority": "secondary",
+          "movement_type": "hip_abduction",
+          "angle": "neutral",
+          "difficulty": [
+            "easy"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=lateral+band+walk+glutes+medius+form"
+        }
+      ]
+    },
+    "calves_gastro": {
+      "label": "Calves \u2014 Gastrocnemius + Tibialis",
+      "muscle_group": "lower",
+      "is_lower": true,
+      "exercises": [
+        {
+          "id": "calf_stand",
+          "name": "Standing Calf Raise",
+          "priority": "primary",
+          "movement_type": "calf_raise",
+          "angle": "standing",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "gwLzBv7i5UA"
+        },
+        {
+          "id": "smith_calf",
+          "name": "Smith Machine Calf Raise",
+          "priority": "primary",
+          "movement_type": "calf_raise",
+          "angle": "standing",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=smith+machine+standing+calf+raise+gastrocnemius+form"
+        },
+        {
+          "id": "donkey_calf",
+          "name": "Donkey Calf Raise",
+          "priority": "secondary",
+          "movement_type": "calf_raise",
+          "angle": "hinge",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=donkey+calf+raise+gastrocnemius+form"
+        },
+        {
+          "id": "single_calf",
+          "name": "Single-leg Standing Calf",
+          "priority": "secondary",
+          "movement_type": "calf_raise",
+          "angle": "standing",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=single+leg+standing+calf+raise+gastrocnemius+form"
+        },
+        {
+          "id": "pause_calf",
+          "name": "Pause Calf Raise",
+          "priority": "secondary",
+          "movement_type": "calf_raise",
+          "angle": "standing",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=pause+calf+raise+gastrocnemius+form"
+        },
+        {
+          "id": "calf_leg_press_g",
+          "name": "Leg Press Calf Raise",
+          "priority": "secondary",
+          "movement_type": "calf_raise",
+          "angle": "prone",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=leg+press+calf+raise+gastrocnemius+form"
+        },
+        {
+          "id": "explosive_calf",
+          "name": "Explosive Calf Raise",
+          "priority": "secondary",
+          "movement_type": "calf_raise",
+          "angle": "standing",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=explosive+calf+raise+gastrocnemius+power+form"
+        },
+        {
+          "id": "tib_raise",
+          "name": "Tibialis Raise",
+          "priority": "primary",
+          "movement_type": "calf_raise",
+          "angle": "standing",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=tibialis+raise+anterior+shin+form"
+        },
+        {
+          "id": "db_tib_raise",
+          "name": "DB Tibialis Raise",
+          "priority": "secondary",
+          "movement_type": "calf_raise",
+          "angle": "standing",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dumbbell+tibialis+raise+shin+anterior+form"
+        }
+      ]
+    },
+    "calves_soleus": {
+      "label": "Calves \u2014 Soleus (Seated)",
+      "muscle_group": "lower",
+      "is_lower": true,
+      "exercises": [
+        {
+          "id": "calf_seat",
+          "name": "Seated Calf Raise",
+          "priority": "primary",
+          "movement_type": "calf_raise",
+          "angle": "seated",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "JbyjNymZOt0"
+        },
+        {
+          "id": "seated_smith_calf",
+          "name": "Seated Smith Calf Raise",
+          "priority": "secondary",
+          "movement_type": "calf_raise",
+          "angle": "seated",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=seated+smith+machine+calf+raise+soleus+form"
+        },
+        {
+          "id": "seated_single_calf",
+          "name": "Single-leg Seated Calf",
+          "priority": "secondary",
+          "movement_type": "calf_raise",
+          "angle": "seated",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=single+leg+seated+calf+raise+soleus+form"
+        },
+        {
+          "id": "lp_seated_calf",
+          "name": "Leg Press Calf (Seated)",
+          "priority": "secondary",
+          "movement_type": "calf_raise",
+          "angle": "seated",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=seated+leg+press+calf+raise+soleus+form"
+        },
+        {
+          "id": "pause_seated_calf",
+          "name": "Pause Seated Calf Raise",
+          "priority": "secondary",
+          "movement_type": "calf_raise",
+          "angle": "seated",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=pause+seated+calf+raise+soleus+form"
+        }
+      ]
+    },
+    "adductors": {
+      "label": "Adductors (Inner Thigh)",
+      "muscle_group": "lower",
+      "is_lower": true,
+      "exercises": [
+        {
+          "id": "adductor_machine",
+          "name": "Machine Hip Adductor",
+          "priority": "primary",
+          "movement_type": "hip_adduction",
+          "angle": "seated",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=hip+adductor+machine+inner+thigh+form"
+        },
+        {
+          "id": "sumo_squat",
+          "name": "Sumo Squat",
+          "priority": "primary",
+          "movement_type": "squat",
+          "angle": "wide",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=sumo+squat+adductors+inner+thigh+form"
+        },
+        {
+          "id": "sumo_dl_add",
+          "name": "Sumo Deadlift (Adductors)",
+          "priority": "primary",
+          "movement_type": "hinge",
+          "angle": "wide",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=sumo+deadlift+adductors+inner+thigh+form"
+        },
+        {
+          "id": "cable_adduction",
+          "name": "Cable Hip Adduction",
+          "priority": "secondary",
+          "movement_type": "hip_adduction",
+          "angle": "standing",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+hip+adduction+inner+thigh+adductors+form"
+        },
+        {
+          "id": "cph_plank",
+          "name": "Copenhagen Plank",
+          "priority": "secondary",
+          "movement_type": "hip_adduction",
+          "angle": "lateral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=copenhagen+plank+adductors+inner+thigh+form"
+        },
+        {
+          "id": "side_lunge",
+          "name": "Side Lunge",
+          "priority": "secondary",
+          "movement_type": "squat",
+          "angle": "wide",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=side+lunge+adductors+inner+thigh+form"
+        },
+        {
+          "id": "cossack_squat",
+          "name": "Cossack Squat",
+          "priority": "secondary",
+          "movement_type": "squat",
+          "angle": "wide",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cossack+squat+adductors+inner+thigh+form"
+        }
+      ]
+    },
+    "hip_flexors": {
+      "label": "Hip Flexors",
+      "muscle_group": "lower",
+      "is_lower": false,
+      "exercises": [
+        {
+          "id": "cable_hip_flex",
+          "name": "Cable Hip Flexion",
+          "priority": "primary",
+          "movement_type": "hip_flexion",
+          "angle": "standing",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+hip+flexion+hip+flexors+form"
+        },
+        {
+          "id": "hanging_knee",
+          "name": "Hanging Knee Raise",
+          "priority": "primary",
+          "movement_type": "hip_flexion",
+          "angle": "hanging",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=hanging+knee+raise+hip+flexors+form"
+        },
+        {
+          "id": "leg_raise_hang",
+          "name": "Hanging Leg Raise",
+          "priority": "primary",
+          "movement_type": "hip_flexion",
+          "angle": "hanging",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "hdng3enaBgU"
+        },
+        {
+          "id": "lying_leg_raise",
+          "name": "Lying Leg Raise",
+          "priority": "secondary",
+          "movement_type": "hip_flexion",
+          "angle": "supine",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=lying+leg+raise+hip+flexors+form"
+        },
+        {
+          "id": "reverse_crunch",
+          "name": "Reverse Crunch",
+          "priority": "secondary",
+          "movement_type": "hip_flexion",
+          "angle": "supine",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=reverse+crunch+hip+flexors+abs+form"
+        },
+        {
+          "id": "dragon_flag_hf",
+          "name": "Dragon Flag",
+          "priority": "secondary",
+          "movement_type": "hip_flexion",
+          "angle": "supine",
+          "difficulty": [
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=dragon+flag+hip+flexors+core+form"
+        },
+        {
+          "id": "cable_crunch_hf",
+          "name": "Cable Crunch (Hip Flexion)",
+          "priority": "secondary",
+          "movement_type": "hip_flexion",
+          "angle": "kneeling",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=cable+crunch+hip+flexors+form"
+        }
+      ]
+    },
+    "lower_back": {
+      "label": "Lower Back (Spinal Erectors)",
+      "muscle_group": "lower",
+      "is_lower": true,
+      "exercises": [
+        {
+          "id": "back_extension",
+          "name": "Back Extension",
+          "priority": "primary",
+          "movement_type": "hinge",
+          "angle": "prone",
+          "difficulty": [
+            "easy",
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=back+extension+spinal+erectors+lower+back+form+jeff+nippard"
+        },
+        {
+          "id": "rev_hyper",
+          "name": "Reverse Hyperextension",
+          "priority": "primary",
+          "movement_type": "hinge",
+          "angle": "prone",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=reverse+hyperextension+spinal+erectors+lower+back+form"
+        },
+        {
+          "id": "rack_pull_lb",
+          "name": "Rack Pull",
+          "priority": "secondary",
+          "movement_type": "hinge",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=rack+pull+lower+back+spinal+erectors+form"
+        },
+        {
+          "id": "good_morning_lb",
+          "name": "Good Morning",
+          "priority": "secondary",
+          "movement_type": "hinge",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=good+morning+lower+back+spinal+erectors+form"
+        },
+        {
+          "id": "bird_dog_lb",
+          "name": "Bird Dog",
+          "priority": "secondary",
+          "movement_type": "core_anti_extension",
+          "angle": "neutral",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=bird+dog+lower+back+spinal+erectors+form"
+        },
+        {
+          "id": "jefferson_curl",
+          "name": "Jefferson Curl",
+          "priority": "secondary",
+          "movement_type": "hinge",
+          "angle": "neutral",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=jefferson+curl+lower+back+spinal+erectors+form"
         }
       ]
     },
@@ -1680,6 +3043,9 @@
         {
           "id": "plank",
           "name": "Plank",
+          "priority": "primary",
+          "movement_type": "core_anti_extension",
+          "angle": "neutral",
           "difficulty": [
             "easy"
           ],
@@ -1688,6 +3054,9 @@
         {
           "id": "ab_wheel",
           "name": "Ab Wheel",
+          "priority": "primary",
+          "movement_type": "core_anti_extension",
+          "angle": "neutral",
           "difficulty": [
             "moderate",
             "hardcore"
@@ -1695,17 +3064,11 @@
           "video_id": "iOkO3m8Tx2M"
         },
         {
-          "id": "leg_raise",
-          "name": "Hanging Leg Raise",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "hdng3enaBgU"
-        },
-        {
           "id": "cable_crunch",
           "name": "Cable Crunch",
+          "priority": "primary",
+          "movement_type": "core_flexion",
+          "angle": "kneeling",
           "difficulty": [
             "easy",
             "moderate"
@@ -1715,6 +3078,9 @@
         {
           "id": "dead_bug",
           "name": "Dead Bug",
+          "priority": "primary",
+          "movement_type": "core_anti_extension",
+          "angle": "supine",
           "difficulty": [
             "easy",
             "moderate"
@@ -1724,6 +3090,9 @@
         {
           "id": "pallof_press",
           "name": "Pallof Press",
+          "priority": "primary",
+          "movement_type": "core_rotation",
+          "angle": "neutral",
           "difficulty": [
             "moderate",
             "hardcore"
@@ -1733,80 +3102,108 @@
         {
           "id": "dragon_flag",
           "name": "Dragon Flag",
+          "priority": "secondary",
+          "movement_type": "core_anti_extension",
+          "angle": "supine",
           "difficulty": [
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=dragon+flag+core+exercise+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=dragon+flag+core+abs+form"
         },
         {
           "id": "hollow_hold",
           "name": "Hollow Body Hold",
+          "priority": "primary",
+          "movement_type": "core_anti_extension",
+          "angle": "supine",
           "difficulty": [
             "easy",
             "moderate"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=hollow+body+hold+core+proper+form"
-        },
-        {
-          "id": "copenhagen",
-          "name": "Copenhagen Plank",
-          "difficulty": [
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=copenhagen+plank+proper+form+core"
+          "video_id": "https://www.youtube.com/results?search_query=hollow+body+hold+core+abs+form"
         },
         {
           "id": "suitcase_carry",
           "name": "Suitcase Carry",
+          "priority": "secondary",
+          "movement_type": "core_rotation",
+          "angle": "neutral",
           "difficulty": [
             "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=suitcase+carry+core+exercise+form"
+          "video_id": "https://www.youtube.com/results?search_query=suitcase+carry+core+obliques+form"
         },
         {
           "id": "v_up",
           "name": "V-Up",
+          "priority": "secondary",
+          "movement_type": "core_flexion",
+          "angle": "supine",
           "difficulty": [
             "moderate",
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=v+up+ab+exercise+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=v+up+abs+core+form"
         },
         {
           "id": "russian_twist",
-          "name": "Russian Twist",
+          "name": "Weighted Russian Twist",
+          "priority": "secondary",
+          "movement_type": "core_rotation",
+          "angle": "seated",
           "difficulty": [
             "easy",
             "moderate"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=russian+twist+weighted+proper+form"
+          "video_id": "https://www.youtube.com/results?search_query=weighted+russian+twist+obliques+form"
         },
         {
           "id": "weighted_crunch",
           "name": "Weighted Crunch",
+          "priority": "secondary",
+          "movement_type": "core_flexion",
+          "angle": "supine",
           "difficulty": [
             "easy",
             "moderate"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=weighted+crunch+abs+proper+form"
-        },
-        {
-          "id": "dragon_flag_neg",
-          "name": "Dragon Flag Negative",
-          "difficulty": [
-            "moderate",
-            "hardcore"
-          ],
-          "video_id": "https://www.youtube.com/results?search_query=dragon+flag+negative+core+form"
+          "video_id": "https://www.youtube.com/results?search_query=weighted+crunch+abs+form"
         },
         {
           "id": "l_sit",
           "name": "L-Sit Hold",
+          "priority": "secondary",
+          "movement_type": "core_anti_extension",
+          "angle": "neutral",
           "difficulty": [
             "hardcore"
           ],
-          "video_id": "https://www.youtube.com/results?search_query=l+sit+hold+core+exercise+form"
+          "video_id": "https://www.youtube.com/results?search_query=l+sit+core+abs+form"
+        },
+        {
+          "id": "landmine_twist",
+          "name": "Landmine Rotation",
+          "priority": "secondary",
+          "movement_type": "core_rotation",
+          "angle": "standing",
+          "difficulty": [
+            "moderate",
+            "hardcore"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=landmine+rotation+obliques+core+form"
+        },
+        {
+          "id": "hanging_knee_core",
+          "name": "Hanging Knee Raise",
+          "priority": "secondary",
+          "movement_type": "core_flexion",
+          "angle": "hanging",
+          "difficulty": [
+            "easy",
+            "moderate"
+          ],
+          "video_id": "https://www.youtube.com/results?search_query=hanging+knee+raise+abs+core+form"
         }
       ]
     }
@@ -1814,117 +3211,150 @@
   "templates": {
     "ppl": {
       "push": [
-        "chest_compound",
-        "chest_secondary",
-        "shoulder_press",
-        "lateral_raise",
-        "triceps_compound",
-        "triceps_isolation",
+        "chest_upper",
+        "chest_mid",
+        "chest_lower",
+        "shoulder_front",
+        "shoulder_side",
+        "shoulder_rear",
+        "triceps_long",
+        "triceps_lateral",
         "core"
       ],
       "pull": [
-        "vertical_pull",
-        "horizontal_row",
-        "rear_delt",
-        "biceps_compound",
-        "biceps_isolation",
-        "traps",
+        "lats_vertical",
+        "lats_horizontal",
+        "upper_back",
+        "traps_upper",
+        "biceps_long",
+        "biceps_short",
+        "brachialis",
         "forearms",
         "core"
       ],
       "legs": [
-        "squat_pattern",
-        "hip_hinge",
-        "quad_isolation",
-        "hamstring_isolation",
-        "calves",
-        "glute_isolation",
+        "quads_compound",
+        "quads_isolation",
+        "hamstrings_curl",
+        "hamstrings_hinge",
+        "glutes_max",
+        "glutes_med",
+        "calves_gastro",
+        "calves_soleus",
+        "adductors",
+        "hip_flexors",
         "core"
       ]
     },
     "pplul": {
       "push": [
-        "chest_compound",
-        "chest_secondary",
-        "shoulder_press",
-        "lateral_raise",
-        "triceps_compound",
-        "triceps_isolation",
+        "chest_upper",
+        "chest_mid",
+        "chest_lower",
+        "shoulder_front",
+        "shoulder_side",
+        "shoulder_rear",
+        "triceps_long",
+        "triceps_lateral",
         "core"
       ],
       "pull": [
-        "vertical_pull",
-        "horizontal_row",
-        "rear_delt",
-        "biceps_compound",
-        "biceps_isolation",
-        "traps",
+        "lats_vertical",
+        "lats_horizontal",
+        "upper_back",
+        "traps_upper",
+        "biceps_long",
+        "biceps_short",
+        "brachialis",
         "forearms",
         "core"
       ],
       "legs": [
-        "squat_pattern",
-        "hip_hinge",
-        "quad_isolation",
-        "hamstring_isolation",
-        "calves",
-        "glute_isolation",
+        "quads_compound",
+        "quads_isolation",
+        "hamstrings_curl",
+        "hamstrings_hinge",
+        "glutes_max",
+        "glutes_med",
+        "calves_gastro",
+        "calves_soleus",
+        "adductors",
+        "hip_flexors",
         "core"
       ],
       "upper": [
-        "chest_compound",
-        "vertical_pull",
-        "shoulder_press",
-        "horizontal_row",
-        "triceps_compound",
-        "biceps_compound",
-        "lateral_raise",
-        "traps",
+        "chest_upper",
+        "chest_mid",
+        "lats_vertical",
+        "lats_horizontal",
+        "shoulder_front",
+        "shoulder_side",
+        "shoulder_rear",
+        "triceps_long",
+        "triceps_lateral",
+        "biceps_long",
+        "biceps_short",
+        "traps_upper",
         "core"
       ],
       "lower": [
-        "squat_pattern",
-        "hip_hinge",
-        "quad_isolation",
-        "hamstring_isolation",
-        "calves",
-        "glute_isolation",
+        "quads_compound",
+        "quads_isolation",
+        "hamstrings_curl",
+        "hamstrings_hinge",
+        "glutes_max",
+        "glutes_med",
+        "calves_gastro",
+        "calves_soleus",
+        "adductors",
+        "hip_flexors",
         "core"
       ]
     },
     "upper_lower": {
       "upper": [
-        "chest_compound",
-        "vertical_pull",
-        "shoulder_press",
-        "horizontal_row",
-        "triceps_compound",
-        "biceps_compound",
-        "lateral_raise",
-        "rear_delt",
-        "traps",
+        "chest_upper",
+        "chest_mid",
+        "chest_lower",
+        "lats_vertical",
+        "lats_horizontal",
+        "shoulder_front",
+        "shoulder_side",
+        "shoulder_rear",
+        "triceps_long",
+        "triceps_lateral",
+        "biceps_long",
+        "biceps_short",
+        "brachialis",
+        "traps_upper",
         "forearms",
         "core"
       ],
       "lower": [
-        "squat_pattern",
-        "hip_hinge",
-        "quad_isolation",
-        "hamstring_isolation",
-        "calves",
-        "glute_isolation",
+        "quads_compound",
+        "quads_isolation",
+        "hamstrings_curl",
+        "hamstrings_hinge",
+        "glutes_max",
+        "glutes_med",
+        "calves_gastro",
+        "calves_soleus",
+        "adductors",
+        "hip_flexors",
         "core"
       ]
     },
     "full_body": {
       "full": [
-        "squat_pattern",
-        "chest_compound",
-        "vertical_pull",
-        "hip_hinge",
-        "triceps_isolation",
-        "biceps_isolation",
-        "traps",
+        "quads_compound",
+        "chest_mid",
+        "lats_vertical",
+        "hamstrings_hinge",
+        "shoulder_front",
+        "triceps_lateral",
+        "biceps_short",
+        "glutes_max",
+        "calves_gastro",
         "core"
       ]
     }
