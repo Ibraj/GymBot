@@ -35,7 +35,6 @@ VALID_DAYS = {
 }
 
 # ── Required movement patterns per day ───────────────────────────────────────
-# If any of these are missing after slot selection, the engine swaps in a fix
 DAY_REQUIRED_PATTERNS = {
     "push":  ["horizontal_push", "vertical_push"],
     "pull":  ["vertical_pull", "horizontal_pull"],
@@ -45,7 +44,7 @@ DAY_REQUIRED_PATTERNS = {
     "full":  ["squat", "horizontal_push", "vertical_pull", "hinge"],
 }
 
-# ── Warmup suggestions (prepended to workout message, not logged) ─────────────
+# ── Warmup ────────────────────────────────────────────────────────────────────
 DAY_WARMUP = {
     "push":  ["Band External Rotation × 15", "YTWL × 10 each"],
     "pull":  ["Band Pull-Apart × 20", "Scapular Pull-ups × 10"],
@@ -55,28 +54,91 @@ DAY_WARMUP = {
     "full":  ["Hip 90/90 Stretch × 60s", "Band Pull-Apart × 20"],
 }
 
-# ── Extra slots added per intensity (on top of base template) ────────────────
-EXTRA_SLOTS = {
+# ── Base templates (lean — easy-level slot count) ────────────────────────────
+# EXTRA_SLOTS layers on top per intensity
+BASE_TEMPLATES = {
     "ppl": {
-        "push":  {"moderate": ["shoulder_rear"], "hardcore": ["shoulder_rear","chest_upper"]},
-        "pull":  {"moderate": ["lats_horizontal"], "hardcore": ["lats_horizontal","biceps_long"]},
-        "legs":  {"moderate": ["quads_isolation"], "hardcore": ["quads_isolation","hamstrings_curl"]},
+        "push":  ["chest_mid", "shoulder_front", "shoulder_side", "triceps_lateral", "core"],
+        "pull":  ["lats_vertical", "lats_horizontal", "biceps_short", "traps_upper", "core"],
+        "legs":  ["quads_compound", "hamstrings_hinge", "glutes_max", "calves_gastro", "core"],
     },
     "pplul": {
-        "push":  {"moderate": ["shoulder_rear"], "hardcore": ["shoulder_rear","chest_upper"]},
-        "pull":  {"moderate": ["lats_horizontal"], "hardcore": ["lats_horizontal","biceps_long"]},
-        "legs":  {"moderate": ["quads_isolation"], "hardcore": ["quads_isolation","hamstrings_curl"]},
-        "upper": {"moderate": ["shoulder_rear"], "hardcore": ["shoulder_rear","chest_upper"]},
-        "lower": {"moderate": ["quads_isolation"], "hardcore": ["quads_isolation","hamstrings_curl"]},
+        "push":  ["chest_mid", "shoulder_front", "shoulder_side", "triceps_lateral", "core"],
+        "pull":  ["lats_vertical", "lats_horizontal", "biceps_short", "traps_upper", "core"],
+        "legs":  ["quads_compound", "hamstrings_hinge", "glutes_max", "calves_gastro", "core"],
+        "upper": ["chest_mid", "lats_vertical", "shoulder_front", "triceps_lateral", "biceps_short", "core"],
+        "lower": ["quads_compound", "hamstrings_hinge", "glutes_max", "calves_gastro", "core"],
     },
     "upper_lower": {
-        "upper": {"moderate": ["shoulder_rear"], "hardcore": ["shoulder_rear","chest_upper"]},
-        "lower": {"moderate": ["quads_isolation"], "hardcore": ["quads_isolation","hamstrings_curl"]},
+        "upper": ["chest_mid", "lats_vertical", "shoulder_front", "triceps_lateral", "biceps_short", "core"],
+        "lower": ["quads_compound", "hamstrings_hinge", "glutes_max", "calves_gastro", "core"],
     },
     "full_body": {
-        "full":  {"moderate": ["quads_isolation"], "hardcore": ["quads_isolation","hamstrings_curl"]},
+        "full":  ["quads_compound", "chest_mid", "lats_vertical", "hamstrings_hinge", "glutes_max", "core"],
     },
 }
+
+# ── Extra slots per intensity ─────────────────────────────────────────────────
+EXTRA_SLOTS = {
+    "ppl": {
+        "push": {
+            "moderate": ["chest_upper", "shoulder_rear", "triceps_long"],
+            "hardcore": ["chest_upper", "chest_lower", "shoulder_rear", "triceps_long"],
+        },
+        "pull": {
+            "moderate": ["upper_back", "biceps_long", "brachialis"],
+            "hardcore": ["upper_back", "biceps_long", "brachialis", "forearms"],
+        },
+        "legs": {
+            "moderate": ["quads_isolation", "hamstrings_curl", "calves_soleus"],
+            "hardcore": ["quads_isolation", "hamstrings_curl", "glutes_med", "calves_soleus"],
+        },
+    },
+    "pplul": {
+        "push": {
+            "moderate": ["chest_upper", "shoulder_rear", "triceps_long"],
+            "hardcore": ["chest_upper", "chest_lower", "shoulder_rear", "triceps_long"],
+        },
+        "pull": {
+            "moderate": ["upper_back", "biceps_long", "brachialis"],
+            "hardcore": ["upper_back", "biceps_long", "brachialis", "forearms"],
+        },
+        "legs": {
+            "moderate": ["quads_isolation", "hamstrings_curl", "calves_soleus"],
+            "hardcore": ["quads_isolation", "hamstrings_curl", "glutes_med", "calves_soleus"],
+        },
+        "upper": {
+            "moderate": ["chest_upper", "shoulder_side", "shoulder_rear", "biceps_long", "traps_upper"],
+            "hardcore": ["chest_upper", "shoulder_side", "shoulder_rear", "triceps_long", "biceps_long", "traps_upper"],
+        },
+        "lower": {
+            "moderate": ["quads_isolation", "hamstrings_curl", "calves_soleus"],
+            "hardcore": ["quads_isolation", "hamstrings_curl", "glutes_med", "calves_soleus"],
+        },
+    },
+    "upper_lower": {
+        "upper": {
+            "moderate": ["chest_upper", "shoulder_side", "shoulder_rear", "biceps_long", "traps_upper"],
+            "hardcore": ["chest_upper", "chest_lower", "shoulder_side", "shoulder_rear", "triceps_long", "biceps_long", "traps_upper"],
+        },
+        "lower": {
+            "moderate": ["quads_isolation", "hamstrings_curl", "calves_soleus"],
+            "hardcore": ["quads_isolation", "hamstrings_curl", "glutes_med", "calves_soleus"],
+        },
+    },
+    "full_body": {
+        "full": {
+            "moderate": ["shoulder_front", "biceps_short", "calves_gastro"],
+            "hardcore": ["shoulder_front", "triceps_lateral", "biceps_short", "calves_gastro"],
+        },
+    },
+}
+
+# ── Session slot counts by intensity ─────────────────────────────────────────
+# For reference — actual counts driven by BASE_TEMPLATES + EXTRA_SLOTS above
+# push:  easy=5  moderate=8  hardcore=9
+# pull:  easy=5  moderate=8  hardcore=9
+# legs:  easy=5  moderate=8  hardcore=9
 
 # ── Deload ────────────────────────────────────────────────────────────────────
 DELOAD_WEEK                = 4

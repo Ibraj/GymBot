@@ -2680,20 +2680,19 @@
         {
           "id": "tib_raise",
           "name": "Tibialis Raise",
-          "priority": "primary",
+          "priority": "isolation",
           "movement_type": "calf_raise",
           "angle": "standing",
           "difficulty": [
             "easy",
-            "moderate",
-            "hardcore"
+            "moderate"
           ],
           "video_id": "https://www.youtube.com/results?search_query=tibialis+raise+anterior+shin+form"
         },
         {
           "id": "db_tib_raise",
           "name": "DB Tibialis Raise",
-          "priority": "secondary",
+          "priority": "isolation",
           "movement_type": "calf_raise",
           "angle": "standing",
           "difficulty": [

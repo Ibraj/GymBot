@@ -2,14 +2,13 @@ import uuid
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ContextTypes
 
-from config import VALID_DAYS, INTENSITY, EXTRA_SLOTS, DAY_WARMUP
+from config import VALID_DAYS, INTENSITY, EXTRA_SLOTS, DAY_WARMUP, BASE_TEMPLATES
 from database import (
     upsert_user, create_session,
     get_active_session, update_session_exercises,
     get_exercise_history, store_workout_message,
     complete_session
 )
-from core.templates import get_slots
 from core.rotation import build_session, get_alternative
 from core.progression import apply_deload
 from core.formatter import build_workout_message_and_keyboard
@@ -24,8 +23,8 @@ async def start_session(user_id: int, day: str, intensity: str,
     week_number = user["week_number"]
     cfg         = INTENSITY["easy"] if is_deload else INTENSITY[intensity]
 
-    # Base slots + intensity extras
-    slots  = list(get_slots(split, day))
+    # Base slots from lean template + intensity extras
+    slots  = list(BASE_TEMPLATES.get(split, {}).get(day, []))
     extras = EXTRA_SLOTS.get(split, {}).get(day, {}).get(intensity, [])
     slots  = slots + extras
 
